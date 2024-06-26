@@ -1,12 +1,12 @@
 ---
 layout: pages/_landing1.njk
 permalink: /
-metaTitle: index eleventyComputed.metaTitle
-metaDescription: index eleventyComputed.metaDescription
-metaKeywords: index eleventyComputed.metaKeywords
-metaRobots: index eleventyComputed.metaRobots
-title: index title
-hero_title:  Tu clínica estética en Sant Boi
+metaTitle: Clínica Estética en Sant Boi | Especialistas en Belleza y Salud
+metaDescription: Descubre la mejor clínica estética en Sant Boi. Ofrecemos tratamientos faciales, corporales, y cirugía estética con resultados excepcionales. ¡Reserva tu consulta hoy!
+metaKeywords: clínica estética Sant Boi, tratamientos faciales Sant Boi, cirugía estética Sant Boi, medicina estética Sant Boi, rejuvenecimiento facial, liposucción, botox, belleza y salud
+metaRobots: index, follow
+title: Clínica Estética en Sant Boi
+hero_title: Tu clínica estética en Sant Boi
 hero_description:  ¿Buscas mejorar tu apariencia? Somos los especialistas que necesitas
 
 hero_description2:  La especialización en tratamientos estéticos y de belleza, conlleva un conocimiento extraordinario en la materia
