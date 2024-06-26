@@ -37,6 +37,20 @@ whytitle1_description: Nuestra marca se forma bajo la conciencia de que solo con
 
 hookfrase: La belleza es nuestra pasión
 
+comentario_1: Los resultados han sido increíbles. Nunca había visto algo así. El equipo de la clínica estética en Sant Boi es excepcional.
+comentario_nombre_1: María López
+comentario_puesto_1: Directora de Marketing
+
+comentario_2: Estoy encantado con el tratamiento recibido. La profesionalidad y dedicación del personal superaron mis expectativas. ¡Recomiendo esta clínica sin dudarlo!
+comentario_nombre_2: Carlos Sánchez
+comentario_puesto_2: Gerente de Operaciones
+
+comentario_3: ¡Qué experiencia tan maravillosa! Los resultados hablan por sí solos. Gracias a todo el equipo por su increíble trabajo y atención.
+comentario_nombre_3: Laura Martínez
+comentario_puesto_3: Jefa de Ventas
+
+
+
 servicios: SERVICIOS
 servicios_description: Contamos con un equipo de profesionales altamente cualificados para gestionar todas tus necesidades estéticas y de salud, asegurando resultados óptimos y personalizados.
 
