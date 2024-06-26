@@ -63,7 +63,7 @@
   "banner_button": "enviar",
 
   "introCta_type": "introCta_type",
-  "introCta_title": "La mejor **web **landing optimizada del mundo",
+  "introCta_title": "El mejor **abogado** **laboral** en Sevilla",
   "introCta_description": "introCta_description",
   "introCta_cta": "introCta_cta",
   "introCta_cta_link": "introCta_cta_link",
@@ -98,6 +98,7 @@
   ],
 
 
+
   "contact_type": "contact_type",
   "contact_title": "contact_title",
   "contact_description": "contact_description",
@@ -106,16 +107,16 @@
   "contact_image": "contact_image",
   "contact_bg_image": "contact_bg_image",
 
-  "faq_title": "faq_title",
-  "faq_description": "faq_description",
+  "faq_title": "Preguntas Frecuentes",
+  "faq_description": "Encuentra las respuestas a las preguntas más comunes.",
   "faq": [
     {
-      "faq_question": "faq_question",
-      "faq_answer": "faq_answer"
+      "faq_question": "¿Dónde coloco el código QR en el restaurante?",
+      "faq_answer": "Imprime el código QR vectorizado, y haz tantas copias como necesites. Colócalo en mesas, paredes, manteles de papel."
     },
     {
-      "faq_question": "faq_question",
-      "faq_answer": "faq_answer"
+      "faq_question": "¿Es necesario instalar una App?",
+      "faq_answer": "No, no queremos poner ninguna barrera a los clientes que lleguen a tu restaurante. Pensamos que es importante no tener que descargar nada cuando quieran ver el menú o la carta digital del restaurante rápidamente."
     }
   ]
 }

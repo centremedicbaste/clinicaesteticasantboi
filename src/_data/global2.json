@@ -110,16 +110,23 @@
   "contact_image": "contact_image",
   "contact_bg_image": "contact_bg_image",
 
-  "faq_title": "faq_title",
-  "faq_description": "faq_description",
-  "faq": [
-    {
-      "faq_question": "faq_question",
-      "faq_answer": "faq_answer"
-    },
-    {
-      "faq_question": "faq_question",
-      "faq_answer": "faq_answer"
-    }
-  ]
+
+
+
+  "faqs": {
+    "faq_titulo": "titulo",
+    "faq_descripcion": "descripcion",
+    "items": [
+      {
+        "faq": "faq_question111",
+        "faq_answer": "faq_answer"
+      },
+      {
+        "faq": "faq_question2222",
+        "faq_answer": "faq_answer"
+      }
+    ]
+  }
+
+
 }

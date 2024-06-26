@@ -11,39 +11,25 @@
     {% endif %}
   </div>
   <div class=" container-global mx-auto   ">
-    <div class="row section-x height-full  align-middle  ">
-      <div class="col-xs-12 col-md-7 mb-24">
-        <div class="vertical-wrap ">
-          <div class="vertical-inner">
-            <h1 class="fluid-3-b ">
-              {% call insert.splitenpalabras(global.introCta_title ) %} {% endcall %}
+    <div class="row section-x height-lg  align-middle  ">
+      <div class="col-xs-6 col-md-5 col-lg-5  align-middle">
+        <div class="vertical-wrap ptr-120 pbr-120 ">
+
+            <h1 class="fluid-3-l mb-32 ">
+              {% call insert.splitenpalabras(hero_title ) %} {% endcall %}
             </h1>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-7 front-text ">
-        <div class="vertical-wrap-2 pb-24 ">
-          <div class="vertical-inner">
-            <h2 class="fluid-8-r mb-8">
-              {% call insert.splitenpalabras( global.introCta_description ) %} {% endcall %}
-          </div>
-        </div>
+            <h2 class="fluid-8-r mb-16">
+              {% call insert.splitenpalabras( hero_description ) %} {% endcall %} </h2>
 
+              <h2 class="fluid-9-r mb-16">
+                {% call insert.splitenpalabras( hero_description2 ) %} {% endcall %} </h2>
+        
 
-        <button type="button"
-          class="btn-primary btn--big btn mb-32">
-
-
-             EMPIEZA A GANAR
-
-
-
-
-      
- 
-        </button>
-
-
+        <a href="#contacta">
+          <button type="button" class="btn-primary btn--big btn mb-32">
+            {{hero_btn}}
+          </button>
+        </a>
         <div class="content-middle mb-16">
           <div class="fluid-9-b">Excelente</div><img width="100px" class=""
             src="https://storage.googleapis.com/landing-strapi-v4/assets/svg/stars-giFRggf5fPfNiJXB7To2fd.svg"
@@ -52,6 +38,17 @@
         </div>
         <div>Valoración: <span class="text-bold"> 4,4 </span>/ de <span class="text-bold">1.200 </span>reseñas en
           Trustpilot</div>
+        </div>
+      </div>
+
+<div class="col-xs-12 col-md-1 col-lg-1 "></div>
+
+      <div class="col-xs-6 col-md-6 col-lg-6 front-text ">
+
+
+
+
+
         {% if btn_whtasapp == 'on' %}
         <div class="main-full">
           <a aria-label="link whatsapp" href="https://wa.me/{{ global.whatsapp }}">

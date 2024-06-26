@@ -63,6 +63,8 @@ module.exports = function (eleventyConfig) {
     });
     return pages.length ? pages[0] : false;
   });
+
+
   eleventyConfig.addFilter(
     "prevInCollectionnext",
     (collection, currentSlug) => {
@@ -77,6 +79,7 @@ module.exports = function (eleventyConfig) {
     const dimensions = sizeOf(`./src/assets/static/images/${src}`); // Ajusta el path según tu estructura de directorios
     return `<img class="${cla}" src="/assets/static/images/${src}" alt="${alt}" title="${title}" width="${dimensions.width}" height="${dimensions.height}">`;
   });
+  
   eleventyConfig.addShortcode("br", function () {
     // Method A: ✅ ideal para tags de espacios {% br %}
     return `
@@ -96,6 +99,24 @@ module.exports = function (eleventyConfig) {
 `;
   });
 
+  eleventyConfig.addNunjucksFilter("mdbr", function(value) {
+    const nunjucksSafe = require("nunjucks").runtime.markSafe;
+  
+    // Verificar si la variable está vacía o nula, y retornar una cadena vacía segura en ese caso
+    if (!value) {
+      return nunjucksSafe('');
+    }
+  
+    return nunjucksSafe(value
+      .replace(/-(.*?)-/g, '<span class="bold">$1</span>')
+      .replace(/\*\*\*/g, '<br>')
+      .replace(/\*\*/g, '<br>')
+      .replace(/\^+/gm, function(match) {
+        return '<br>'.repeat(match.length);
+      })
+    );
+  });
+
 // Define la ruta a la carpeta de templates
 const templatesDir = path.resolve(__dirname, 'node_modules', 'boilerplate-modules', 'src', '_includes', 'templates');
 
@@ -106,8 +127,8 @@ eleventyConfig.addGlobalData('pluginTemplates', templates.map(file => path.join(
 
 // Define la ruta a la carpeta de templates
 
-  eleventyConfig.addFilter("wrapWithDiv", function (markdownString) {
-    return markdownString.replace(/--(.*?)--/g, '<span class="bold">$1</span>');
+  eleventyConfig.addFilter("mbbr", function (markdownString) {
+    return markdownString.replace(/-(.*?)-/g, '<span class="bold">$1</span>');
   });
   eleventyConfig.addPlugin(embeds);
   eleventyConfig.setLibrary(

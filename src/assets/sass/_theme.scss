@@ -1,82 +1,74 @@
-
-
-
 .btn-primary {
-    color: $c-white;
-    background-image: var(--bg-primary);
-    border: 1px solid #3D40F5;
-  }
-  .has-light {
-    .btn-primary {
-      color: $c-white;
-      background-image: var(--bg-primary);
-      border: 1px solid #3D40F5;
+  color: $c-white;
+  background-color: #a78b4f;
+  border: 1px solid #a78b4f;
+}
+b {
+  @include font-bold;
+}
+strong {
+  color: $c-secondary;
+}
+b {
+  color: $c-secondary;
+}
+.bold {
+  background-color: #a78b4f;;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.btn.btn--icon {
+  width: 300px;
+  height: 80px;
+  background-color: $c-white;
+  border-color: $c-white;
+  &:hover {
+    opacity: 1;
+    background-color: $c-white;
+    border-color: $c-white;
+    .btn__circle {
+      -webkit-clip-path: inset(0 round 4.25rem);
+      clip-path: inset(0 round 4.25rem);
     }
   }
+  .btn--icon-text {
+    position: absolute;
+    left: 32px;
+    top: 32px;
+    line-height: 1;
+  }
 
-
-  strong {
-    color: $c-secondary;
+}
+.has-light {
+  .btn-primary {
+    color: $c-white;
+    border: 1px solid $c-accent;
+    background-color:$c-accent;
+  }
+  a {
+    color: white;
   }
   b {
-    color: $c-secondary;
+    color: white;
   }
-
-  .bold {
-    background-image: linear-gradient(120deg, #E14EF7 0%, #8E44F6 30%, #3D40F5 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .menu-toogle-bars {
+    span {
+      background-color: $c-white;
+    }
   }
-
-
-.btn.btn--icon {
-    width: 300px;
-    height: 80px;
-    background-color: #fff;
-    border-color: #fff;
-    &:hover {
-      opacity: 1;
-      background-color: #fff;
-      border-color: #fff;
-      .btn__circle {
-        -webkit-clip-path: inset(0 round 4.25rem);
-        clip-path: inset(0 round 4.25rem);
+  .scrolled & {
+    .menu-toogle-bars {
+      span {
+        background-color: #000;
       }
     }
-  
-    .btn--icon-text {
-      position: absolute;
-      left: 32px;
-      top: 32px;
-      line-height: 1;
-    }
-
-
-
-    .btn__circle {
-        transition: transform .65s cubic-bezier(0.785, 0.135, 0.15, 0.86), -webkit-clip-path .65s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-        transition: clip-path .65s cubic-bezier(0.785, 0.135, 0.15, 0.86), transform .65s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-        transition: clip-path .65s cubic-bezier(0.785, 0.135, 0.15, 0.86), transform .65s cubic-bezier(0.785, 0.135, 0.15, 0.86), -webkit-clip-path .65s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-        position: absolute;
-        border-radius: 9999px;
-        background-image:linear-gradient(120deg, #E14EF7 0%, #8E44F6 30%, #3D40F5 100%);
-        /* padding-left: 40px; */
-        /* padding-right: 40px; */
-        line-height: 1;
-        bottom: -1px;
-        left: -1px;
-        right: -1px;
-        top: -1px;
-        clip-path: inset(10px 10px 10px calc(100% - 73px) round 50px);
-
-         svg {
-            width: 1.5rem;
-            height: 1.5rem;
-            position: absolute;
-            top: 30px;
-            right: 30px;
-        }
+  }
+  .menu-open & {
+    .menu-toogle-bars {
+      span {
+        background-color: #000;
+      }
     }
   }
-  
+}

@@ -1,0 +1,123 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/assets/images"
+public_folder: "/assets/images"
+
+logo_url: /assets/static/images/login-page/logo-check-qr-login.png
+
+collections:
+  - name: "json"
+    label: "JSON Files"
+    files:
+      - label: "CheckqrPay"
+        name: "checkqrpay"
+        file: "path/to/your/checkqrpay.json"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Language", name: "lang", widget: "string"}
+          - {label: "Footer", name: "footer", widget: "string"}
+          - {label: "URL", name: "url", widget: "string"}
+          - {label: "Tag Manager", name: "tag_manager", widget: "string"}
+          - {label: "Home", name: "home", widget: "string"}
+          - {label: "About", name: "about", widget: "string"}
+          - {label: "Services", name: "services", widget: "string"}
+          - {label: "Blog", name: "blog", widget: "string"}
+          - {label: "Contact", name: "contact", widget: "string"}
+          - {label: "Search Console", name: "search_console", widget: "string"}
+          - {label: "Empresa Legal", name: "empresa_legal", widget: "string"}
+          - {label: "Empresa Corto", name: "empresa_corto", widget: "string"}
+          - {label: "Website", name: "website", widget: "string"}
+          - {label: "Teléfono", name: "telefono", widget: "string"}
+          - {label: "Empresa DNI", name: "empresa_dni", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "WhatsApp", name: "whatsapp", widget: "string"}
+          - {label: "Direction", name: "direction", widget: "string"}
+          - {label: "Empresa Legal Dirección", name: "empresa_legal_direccion", widget: "string"}
+          - {label: "Direction Link", name: "direction_link", widget: "string"}
+          - {label: "Contacta Map", name: "contacta_map", widget: "string"}
+          - {label: "Empresa Copyright", name: "empresa_copyright", widget: "string"}
+          - {label: "Author", name: "author", widget: "string"}
+          - {label: "Author Web", name: "authorweb", widget: "string"}
+          - {label: "Author Instagram", name: "authorinstagram", widget: "string"}
+          - {label: "Empresa", name: "empresa", widget: "string"}
+          - {label: "Image Directory", name: "imageDir", widget: "string"}
+          - {label: "Brands", name: "brands", widget: "string"}
+          - {label: "Galería", name: "galeria", widget: "string"}
+          - {label: "Contact Image", name: "contact_img", widget: "string"}
+          - {label: "Empresa Legal Titular", name: "empresa_legal_titular", widget: "string"}
+          - {label: "Link", name: "link", widget: "string"}
+          - {label: "Código Postal", name: "codigopostal", widget: "string"}
+          - {label: "Dirección", name: "direccion", widget: "string"}
+          - {label: "Ciudad", name: "ciudad", widget: "string"}
+          - {label: "Provincia", name: "provincia", widget: "string"}
+          - {label: "Actividad", name: "actividad", widget: "string"}
+          - {label: "Home Image", name: "home_image", widget: "string"}
+          - {label: "Color Blanco", name: "c_white", widget: "string"}
+          - {label: "Color Gris", name: "c_gray", widget: "string"}
+          - {label: "Color Primario", name: "c_primary", widget: "string"}
+          - {label: "Color Secundario", name: "c_secondary", widget: "string"}
+          - {label: "Color de Acento", name: "c_accent", widget: "string"}
+          - {label: "Fondo Oscuro", name: "bg_dark", widget: "string"}
+          - {label: "Fondo Claro", name: "bg_light", widget: "string"}
+          - {label: "Color de Fondo Claro", name: "c_bg_light", widget: "string"}
+          - {label: "Color de Fondo Oscuro", name: "c_bg_dark", widget: "string"}
+          - {label: "Fondo Primario", name: "bg_primary", widget: "string"}
+          - {label: "Radio del Botón", name: "btn_radius", widget: "string"}
+          - {label: "Padding Global", name: "padding-global", widget: "string"}
+          - {label: "SEO Título", name: "seo_title", widget: "string"}
+          - {label: "SEO Descripción", name: "seo_description", widget: "string"}
+          - {label: "Google Maps API", name: "googlemaps_api", widget: "string"}
+          - {label: "Google Maps Link", name: "googlemaps_link", widget: "string"}
+          - {label: "Google Maps Iframe", name: "googlemaps_iframe", widget: "string"}
+          - {label: "LinkedIn", name: "social_linkedin", widget: "string"}
+          - {label: "YouTube", name: "social_youtube", widget: "string"}
+          - {label: "Instagram", name: "social_instagram", widget: "string"}
+          - {label: "Banner Título", name: "banner_title", widget: "string"}
+          - {label: "Banner Texto", name: "banner_text", widget: "string"}
+          - {label: "Banner Claim", name: "banner_claim", widget: "string"}
+          - {label: "Banner Button", name: "banner_button", widget: "string"}
+          - {label: "Intro CTA Type", name: "introCta_type", widget: "string"}
+          - {label: "Intro CTA Title", name: "introCta_title", widget: "string"}
+          - {label: "Intro CTA Description", name: "introCta_description", widget: "string"}
+          - {label: "Intro CTA CTA", name: "introCta_cta", widget: "string"}
+          - {label: "Intro CTA CTA Link", name: "introCta_cta_link", widget: "string"}
+          - {label: "Intro CTA Image", name: "introCta_image", widget: "string"}
+          - {label: "Intro CTA Background Image", name: "introCta_bg_image", widget: "string"}
+          - {label: "Why Type", name: "why_type", widget: "string"}
+          - {label: "Why Title", name: "why_title", widget: "string"}
+          - {label: "Why Description", name: "why_description", widget: "string"}
+          - {label: "Why CTA", name: "why_cta", widget: "string"}
+          - {label: "Why CTA Link", name: "why_cta_link", widget: "string"}
+          - {label: "Why Image", name: "why_image", widget: "string"}
+          - {label: "Why Background Image", name: "why_bg_image", widget: "string"}
+          - {label: "Benefit Type", name: "benefit_type", widget: "string"}
+          - {label: "Benefit Title", name: "benefit_title", widget: "string"}
+          - {label: "Benefit Description", name: "benefit_description", widget: "string"}
+          - {label: "Benefit CTA", name: "benefit_cta", widget: "string"}
+          - {label: "Benefit CTA Link", name: "benefit_cta_link", widget: "string"}
+          - {label: "Benefit Image", name: "benefit_image", widget: "string"}
+          - {label: "Benefit Background Image", name: "benefit_bg_image", widget: "string"}
+          - label: "Benefits"
+            name: "benefit"
+            widget: "list"
+            fields:
+              - {label: "Benefit Question", name: "benefit_question", widget: "string"}
+              - {label: "Benefit Answer", name: "benefit_answer", widget: "string"}
+          - {label: "Contact Type", name: "contact_type", widget: "string"}
+          - {label: "Contact Title", name: "contact_title", widget: "string"}
+          - {label: "Contact Description", name: "contact_description", widget: "string"}
+          - {label: "Contact CTA", name: "contact_cta", widget: "string"}
+          - {label: "Contact CTA Link", name: "contact_cta_link", widget: "string"}
+          - {label: "Contact Image", name: "contact_image", widget: "string"}
+          - {label: "Contact Background Image", name: "contact_bg_image", widget: "string"}
+          - {label: "FAQ Title", name: "faq_title", widget: "string"}
+          - {label: "FAQ Description", name: "faq_description", widget: "string"}
+          - label: "FAQs"
+            name: "faq"
+            widget: "list"
+            fields:
+              - {label: "FAQ Question", name: "faq_question", widget: "string"}
+              - {label: "FAQ Answer", name: "faq_answer", widget: "string"}
+
