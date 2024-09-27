@@ -10,20 +10,24 @@ const { eleventyImagePlugin } = require("@11ty/eleventy-img");
 const path = require('path');
 const fs = require('fs');
 
-
 const mdOptions = {
   html: true,
   breaks: true,
   linkify: true,
   typographer: true,
 };
+
 const mdAnchorOpts = {
-  permalink: true,
-  permalinkClass: "anchor-link",
-  permalinkSymbol: "#",
-  level: [1, 2, 3, 4],
+  permalink: markdownItAnchor.permalink.ariaHidden({
+    placement: 'before',
+    class: 'anchor-link',
+    symbol: '#',
+    level: [1, 2, 3, 4],
+  })
 };
+
 module.exports = function (eleventyConfig) {
+  
   eleventyConfig.addDataExtension("json", (contents) => JSON.parse(contents));
   eleventyConfig.addTemplateFormats("njk");
   eleventyConfig.addPassthroughCopy("./src/css/style.css");
@@ -31,12 +35,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/pages", "pages");
   eleventyConfig.addPassthroughCopy("src/site.webmanifest");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+
   // Netlify CMS
   eleventyConfig.addPassthroughCopy("./admin");
   // Netlify/Decap CMS + config files bundled with webpack
   eleventyConfig.addPassthroughCopy("dist");
   eleventyConfig.addPairedShortcode("myShortcode", function (content) {
-    // Method A: ✅ ideal para encapsular {% myShortcode %}  dfdfdf  {% endmyShortcode %}
     return `<div class="is-flex full-container-blog content-center">${content}</div>`;
   });
   eleventyConfig.addFilter("nextInCollection", (collection, currentSlug) => {
@@ -46,16 +50,13 @@ module.exports = function (eleventyConfig) {
     });
     return pages.length ? pages[0] : false;
   });
-  eleventyConfig.addFilter(
-    "nextInCollectionnext",
-    (collection, currentSlug) => {
-      const currentIndex = getIndex(collection, currentSlug);
-      const pages = collection.filter((page, index) => {
-        return index == currentIndex + 2 ? page : false;
-      });
-      return pages.length ? pages[0] : false;
-    }
-  );
+  eleventyConfig.addFilter("nextInCollectionnext", (collection, currentSlug) => {
+    const currentIndex = getIndex(collection, currentSlug);
+    const pages = collection.filter((page, index) => {
+      return index == currentIndex + 2 ? page : false;
+    });
+    return pages.length ? pages[0] : false;
+  });
   eleventyConfig.addFilter("prevInCollection", (collection, currentSlug) => {
     const currentIndex = getIndex(collection, currentSlug);
     const pages = collection.filter((page, index) => {
@@ -63,50 +64,34 @@ module.exports = function (eleventyConfig) {
     });
     return pages.length ? pages[0] : false;
   });
-
-
-  eleventyConfig.addFilter(
-    "prevInCollectionnext",
-    (collection, currentSlug) => {
-      const currentIndex = getIndex(collection, currentSlug);
-      const pages = collection.filter((page, index) => {
-        return index == currentIndex - 2 ? page : false;
-      });
-      return pages.length ? pages[0] : false;
-    }
-  );
+  eleventyConfig.addFilter("prevInCollectionnext", (collection, currentSlug) => {
+    const currentIndex = getIndex(collection, currentSlug);
+    const pages = collection.filter((page, index) => {
+      return index == currentIndex - 2 ? page : false;
+    });
+    return pages.length ? pages[0] : false;
+  });
   eleventyConfig.addShortcode("image", function (src, alt, title, cla) {
-    const dimensions = sizeOf(`./src/assets/static/images/${src}`); // Ajusta el path según tu estructura de directorios
+    const dimensions = sizeOf(`./src/assets/static/images/${src}`);
     return `<img class="${cla}" src="/assets/static/images/${src}" alt="${alt}" title="${title}" width="${dimensions.width}" height="${dimensions.height}">`;
   });
-  
   eleventyConfig.addShortcode("br", function () {
-    // Method A: ✅ ideal para tags de espacios {% br %}
-    return `
-  <br>
-`;
+    return `<br>`;
   });
   eleventyConfig.addShortcode("br2", function () {
-    // Method A: ✅ ideal para tags de espacios {% br2 %}
-    return `
-  <br><br>
-`;
+    return `<br><br>`;
   });
   eleventyConfig.addShortcode("br3", function () {
-    // Method A: ✅ ideal para tags de espacios {% br3 %}
-    return `
-  <br><br><br>
-`;
+    return `<br><br><br>`;
   });
-
+  eleventyConfig.addFilter("wrapWithDiv", function(markdownString) {
+    return markdownString.replace(/--(.*?)--/g, '<div class="bold">$1</div>');
+  });
   eleventyConfig.addNunjucksFilter("mdbr", function(value) {
     const nunjucksSafe = require("nunjucks").runtime.markSafe;
-  
-    // Verificar si la variable está vacía o nula, y retornar una cadena vacía segura en ese caso
     if (!value) {
       return nunjucksSafe('');
     }
-  
     return nunjucksSafe(value
       .replace(/-(.*?)-/g, '<span class="bold">$1</span>')
       .replace(/\*\*\*/g, '<br>')
@@ -117,15 +102,11 @@ module.exports = function (eleventyConfig) {
     );
   });
 
-// Define la ruta a la carpeta de templates
-const templatesDir = path.resolve(__dirname, 'node_modules', 'boilerplate-modules', 'src', '_includes', 'templates');
+  // Define la ruta a la carpeta de templates
+  const templatesDir = path.resolve(__dirname, 'src', '_includes', 'templates');
+  const templates = fs.readdirSync(templatesDir).filter(file => file.endsWith('.njk'));
 
-
-const templates = fs.readdirSync(templatesDir).filter(file => file.endsWith('.njk'));
-
-eleventyConfig.addGlobalData('pluginTemplates', templates.map(file => path.join(templatesDir, file)));
-
-// Define la ruta a la carpeta de templates
+  eleventyConfig.addGlobalData('pluginTemplates', templates.map(file => path.join(templatesDir, file)));
 
   eleventyConfig.addFilter("mbbr", function (markdownString) {
     return markdownString.replace(/-(.*?)-/g, '<span class="bold">$1</span>');
@@ -160,7 +141,6 @@ eleventyConfig.addGlobalData('pluginTemplates', templates.map(file => path.join(
   });
   eleventyConfig.addFilter("prevInCollection3", (collection, currentSlug) => {
     const currentIndex = getIndex(collection, currentSlug);
-    // Busca dos posiciones adelante para encontrar el siguiente del siguiente
     const pages = collection.filter((page, index) => {
       return index === currentIndex - 3 ? page : false;
     });
@@ -172,26 +152,38 @@ eleventyConfig.addGlobalData('pluginTemplates', templates.map(file => path.join(
     }
     return value;
   });
+
   // WebC
   eleventyConfig.addPlugin(eleventyWebcPlugin, {
     components: [
-      // …
-      // Add as a global WebC component
       "npm:@11ty/eleventy-img/*.webc",
     ],
   });
   eleventyConfig.addPlugin(eleventyImagePlugin, {
-    // Set global default options
     formats: ["webp"],
     urlPath: "/assets/static/",
     outputDir: "public/assets/static/",
-    // Notably `outputDir` is resolved automatically
-    // to the project output directory  npm install eleventy-plugin-seo --save falta este
     defaultAttributes: {
       loading: "lazy",
       decoding: "async",
     },
   });
+
+  // Add filenames to .njk files
+  eleventyConfig.on('beforeBuild', () => {
+    const templatesDir = path.resolve(__dirname, 'src', '_includes', 'templates');
+    const templates = fs.readdirSync(templatesDir).filter(file => file.endsWith('.njk'));
+    
+    templates.forEach(file => {
+      const filePath = path.join(templatesDir, file);
+      const content = fs.readFileSync(filePath, 'utf-8');
+      if (!content.startsWith(`<!-- ${file} -->`)) {
+        const newContent = `<!-- ${file} -->\n` + content;
+        fs.writeFileSync(filePath, newContent, 'utf-8');
+      }
+    });
+  });
+
   return {
     dir: {
       data: "_data",
