@@ -57,8 +57,8 @@ servicios_description: Contamos con un equipo de profesionales altamente cualifi
 servicio1_title: Tratamientos Faciales Personalizados
 servicio1_content: Somos un referente en la región para tratamientos faciales personalizados, colaboramos con las mejores marcas y técnicas para asegurar tu satisfacción.
 
-servicio2_title: Cirugía Plástica
-servicio2_content: Te ayudamos y asesoramos en todo tipo de cirugías plásticas, desde aumento de senos hasta rinoplastia. Nuestro equipo está especializado en procedimientos seguros y eficaces.
+servicio2_title: 
+servicio2_content: 
 
 servicio3_title: Tratamientos Corporales
 servicio3_content: Si deseas mejorar la apariencia de tu cuerpo, ofrecemos tratamientos corporales avanzados, adaptados a tus necesidades específicas.
