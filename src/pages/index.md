@@ -19,8 +19,8 @@ introbenefits_1title: Tratamientos Faciales
 
 introbenefits_1description: Realizamos tratamientos faciales personalizados, desde limpieza profunda hasta rejuvenecimiento facial, utilizando técnicas avanzadas y productos de alta calidad.
 
-introbenefits_2title: Cirugía Estética
-introbenefits_2description: ¿Estás pensando en someterte a una cirugía estética? Nos especializamos en una amplia gama de procedimientos quirúrgicos, asegurando resultados naturales y seguros.
+introbenefits_2title: Cirugía Dental
+introbenefits_2description: ¿Estás pensando en someterte a una cirugía dental? Nos especializamos en una amplia gama de procedimientos quirúrgicos, asegurando resultados naturales y seguros.
 
 introbenefits_3title: Tratamientos Corporales
 
