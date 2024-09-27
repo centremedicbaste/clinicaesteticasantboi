@@ -16,33 +16,31 @@
       <div class="col-xs-6 col-md-5 col-lg-5  align-middle">
         <div class="vertical-wrap ptr-120 pbr-120 ">
 
-            <h1 class="fluid-3-l mb-32 ">
-              {% call insert.splitenpalabras(hero_title ) %} {% endcall %}
-            </h1>
-            <h2 class="fluid-8-r mb-16">
-              {% call insert.splitenpalabras( hero_description ) %} {% endcall %} </h2>
+          <h1 class="fluid-3-l mb-32 ">
+            {{hero_title}}
 
-              <h2 class="fluid-9-r mb-16">
-                {% call insert.splitenpalabras( hero_description2 ) %} {% endcall %} </h2>
-        
 
-        <a href="#contacta">
-          <button type="button" class="btn-primary btn--big btn mb-32">
-            {{hero_btn}}
-          </button>
-        </a>
-        <div class="content-middle mb-16">
-          <div class="fluid-9-b">Excelente</div><img width="100px" class=""
-            src="https://storage.googleapis.com/landing-strapi-v4/assets/svg/stars-giFRggf5fPfNiJXB7To2fd.svg"
-            loading="lazy" alt="estrellas de Truspilot" height="100%" width="100%"
-            srcset="https://storage.googleapis.com/landing-strapi-v4/assets/svg/stars-giFRggf5fPfNiJXB7To2fd.svg">
-        </div>
-        <div>Valoración: <span class="text-bold"> 4,4 </span>/ de <span class="text-bold">1.200 </span>reseñas en
-          Trustpilot</div>
+
+          </h1>
+          <h2 class="fluid-8-r mb-16">
+            {% call insert.splitenpalabras( hero_description ) %} {% endcall %} </h2>
+
+          <h2 class="fluid-9-r mb-16">
+            {% call insert.splitenpalabras( hero_description2 ) %} {% endcall %} </h2>
+
+
+          <a href="#contacta">
+            <button type="button" class="btn-primary btn--big btn mb-32">
+              {{hero_btn}}
+            </button>
+          </a>
+
+
+
         </div>
       </div>
 
-<div class="col-xs-12 col-md-1 col-lg-1 "></div>
+      <div class="col-xs-12 col-md-1 col-lg-1 "></div>
 
       <div class="col-xs-6 col-md-6 col-lg-6 front-text ">
 

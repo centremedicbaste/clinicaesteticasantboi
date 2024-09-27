@@ -3,7 +3,7 @@ layout: layout/base.njk
 permalink: /directorio/
 ---
 <div class="container-2 text-center mt-120">
-  <h1 class="h1 mb-16"> Directorio de {{ ejemplohtml.grupo[0].nombre }} </h1>
+  <div class="h1 mb-16"> Directorio de {{ ejemplohtml.grupo[0].nombre }} </div> 
   <ul class="grid-4 list-clear ttc">
     {% for idx in range(0, ejemplohtml.elementos | length) %}
     {% set icononuevo = ejemplohtml.elementos[idx].tipo %}
