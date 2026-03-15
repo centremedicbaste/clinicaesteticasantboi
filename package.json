@@ -41,7 +41,7 @@
     "boilerplate-modules": "^1.0.7",
     "decap-cms-app": "^3.1.10",
     "eleventy-plugin-embed-everything": "^1.18.2",
-    "holygrailcss": "^3.0.4",
+    "holygrailcss": "^3.0.11",
     "image-size": "^1.1.1",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.0.1",
