@@ -1,0 +1,64 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a class="brand brand--footer" href="/">
+          <span class="brand__name">{{ global.empresa }}</span>
+        </a>
+        <p class="footer-claim">{{ global.claim }}</p>
+        <p class="footer-meta">{{ global.registro_sanitario }}</p>
+        <p class="footer-meta">Centro fundado en {{ global.fundacion }}</p>
+      </div>
+
+      <div class="site-footer__cols">
+        <div class="footer-col">
+          <h4 class="footer-col__title">Medicina estética</h4>
+          <ul>
+            {% for s in global.menu_principal[0].submenu %}<li><a href="{{ s.url }}">{{ s.label }}</a></li>{% endfor %}
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__title">Odontología</h4>
+          <ul>
+            {% for s in global.menu_principal[1].submenu %}<li><a href="{{ s.url }}">{{ s.label }}</a></li>{% endfor %}
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__title">Clínica</h4>
+          <ul>
+            <li><a href="/equipo/">Equipo médico</a></li>
+            <li><a href="/sobre-nosotros/">Sobre la clínica</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/preguntas-frecuentes/">Preguntas frecuentes</a></li>
+            <li><a href="/contacto/">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-col--contact">
+          <h4 class="footer-col__title">Visitarnos</h4>
+          <address>
+            {{ global.direccion }}<br>
+            {{ global.codigopostal }} {{ global.ciudad }}<br>
+            {{ global.provincia }}, España
+          </address>
+          <p>
+            <a href="tel:{{ global.telefono_link }}">{{ global.telefono_visible }}</a><br>
+            <a href="mailto:{{ global.email }}">{{ global.email }}</a>
+          </p>
+          <p class="footer-hours">{{ global.horario_visible }}</p>
+          <ul class="social">
+            <li><a href="{{ global.social_instagram }}" aria-label="Instagram" rel="noopener">Instagram</a></li>
+            <li><a href="{{ global.social_facebook }}" aria-label="Facebook" rel="noopener">Facebook</a></li>
+            <li><a href="{{ global.social_tiktok }}" aria-label="TikTok" rel="noopener">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p class="copy">{{ global.empresa_copyright }}</p>
+      <ul class="legal">
+        {% for l in global.menu_legal %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</footer>

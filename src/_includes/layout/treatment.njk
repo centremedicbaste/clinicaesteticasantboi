@@ -1,0 +1,128 @@
+---
+layout: layout/base.njk
+pageType: treatment
+ogType: article
+---
+
+{% set faqSchema = treatmentFaq %}
+{% set pageSchema %}
+{
+  "@type": "MedicalProcedure",
+  "@id": "{{ global.url }}{{ page.url }}#procedure",
+  "name": "{{ treatmentName }}",
+  "alternateName": "{{ treatmentAltName }}",
+  "description": "{{ metaDescription | replace('"','\\"') }}",
+  "url": "{{ global.url }}{{ page.url }}",
+  "procedureType": "{{ procedureType or 'NoninvasiveProcedure' }}",
+  "bodyLocation": "{{ bodyLocation or 'Face' }}",
+  "preparation": "{{ preparation | default('Limpieza facial básica el día del tratamiento. Evitar antiinflamatorios 48h antes si es posible.') | replace('"','\\"') }}",
+  "followup": "{{ followup | default('Revisión a los 14 días incluida en el tratamiento.') | replace('"','\\"') }}",
+  "performer": {
+    "@type": "Physician",
+    "name": "{{ performer or 'Equipo médico Centre Mèdic Basté' }}",
+    "medicalSpecialty": "{{ medicalSpecialty or 'Dermatology' }}"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "{{ priceFrom }}",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": "{{ priceFrom }}",
+      "priceCurrency": "EUR",
+      "valueAddedTaxIncluded": "true"
+    },
+    "availability": "https://schema.org/InStock",
+    "url": "{{ global.url }}{{ page.url }}"
+  }
+}
+{% endset %}
+
+{% set breadcrumbs = [
+  { label: 'Inicio', url: '/' },
+  { label: parentLabel, url: parentUrl },
+  { label: treatmentName, url: page.url }
+] %}
+
+<section class="inner-hero">
+  <div class="inner-hero__inner">
+    <div class="inner-hero__copy fade-in">
+      <nav class="breadcrumbs" aria-label="breadcrumb">
+        <ol>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="{{ parentUrl }}">{{ parentLabel }}</a></li>
+          <li aria-current="page">{{ treatmentName }}</li>
+        </ol>
+      </nav>
+      <span class="eyebrow">{{ parentLabel }}</span>
+      <h1 class="inner-hero__title">{{ heroTitle | safe }}</h1>
+      <p class="inner-hero__lead lead">{{ heroLead }}</p>
+      <div class="inner-hero__cta">
+        <a href="/contacto/?tratamiento={{ treatmentSlug }}" class="btn btn--primary">Reservar valoración gratuita</a>
+        <a href="https://wa.me/{{ global.whatsapp }}" class="btn btn--ghost">WhatsApp</a>
+      </div>
+    </div>
+    <div class="inner-hero__visual fade-in">
+      <img src="{{ heroImage }}" alt="{{ heroAlt }}" loading="eager" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<section class="inner-hero__facts">
+  <dl class="inner-hero__facts-inner">
+    <div class="fact"><dt>Duración</dt><dd>{{ duracion }}</dd></div>
+    <div class="fact"><dt>Anestesia</dt><dd>{{ anestesia }}</dd></div>
+    <div class="fact"><dt>Resultados</dt><dd>{{ resultados }}</dd></div>
+    <div class="fact"><dt>Desde</dt><dd>{{ priceFrom }} €</dd></div>
+  </dl>
+</section>
+
+<section class="bg-paper">
+  <div class="wrap wrap--prose">
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+  </div>
+</section>
+
+{% if treatmentFaq %}
+<section class="bg-bg-alt">
+  <div class="wrap">
+    <div class="section-intro section-intro--center">
+      <div class="section-intro__text">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2 class="serif">{{ faqTitle or 'Lo que más nos preguntan' }}</h2>
+      </div>
+    </div>
+    <div class="faq mt-12">
+      {% for f in treatmentFaq %}
+      <details class="faq__item"{% if loop.first %} open{% endif %}>
+        <summary class="faq__q">{{ f.pregunta }}</summary>
+        <div class="faq__a"><p>{{ f.respuesta | safe }}</p></div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="contact-bar">
+  <div class="wrap">
+    <div class="contact-bar__grid">
+      <div>
+        <span class="eyebrow">Reserva tu valoración</span>
+        <h2 class="serif">¿Te interesa {{ treatmentName | lower }}?</h2>
+        <p class="lead mt-4">Estudio personalizado gratuito. Sin compromiso. Te decimos si es el tratamiento adecuado para ti.</p>
+        <div class="hero__cta">
+          <a href="/contacto/?tratamiento={{ treatmentSlug }}" class="btn btn--gold btn--lg">Reservar visita</a>
+          <a href="tel:{{ global.telefono_link }}" class="btn btn--ghost btn--lg" style="border-color:#F4F1EC;color:#F4F1EC">{{ global.telefono_visible }}</a>
+        </div>
+      </div>
+      <dl>
+        <dt>Dirección</dt><dd>{{ global.direccion }}<br>{{ global.codigopostal }} {{ global.ciudad }}</dd>
+        <dt>Horario</dt><dd>{{ global.horario_visible }}</dd>
+        <dt>Realiza este tratamiento</dt><dd>{{ performer or 'Equipo médico colegiado · Centre Mèdic Basté' }}</dd>
+      </dl>
+    </div>
+  </div>
+</section>

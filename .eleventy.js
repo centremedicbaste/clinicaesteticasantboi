@@ -30,11 +30,7 @@ module.exports = function (eleventyConfig) {
   
   eleventyConfig.addDataExtension("json", (contents) => JSON.parse(contents));
   eleventyConfig.addTemplateFormats("njk");
-  eleventyConfig.addPassthroughCopy("./src/css/style.css");
   eleventyConfig.addPassthroughCopy("./src/assets");
-  eleventyConfig.addPassthroughCopy("src/pages", "pages");
-  eleventyConfig.addPassthroughCopy("src/site.webmanifest");
-  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   // Netlify CMS
   eleventyConfig.addPassthroughCopy("./admin");

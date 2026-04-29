@@ -1,0 +1,218 @@
+{
+  "servicios_destacados": [
+    {
+      "id": "botox",
+      "categoria": "Medicina estética facial",
+      "titulo": "Antiarrugas",
+      "claim": "Suaviza arrugas de expresión sin perder naturalidad",
+      "descripcion": "Tratamiento médico para atenuar arrugas dinámicas en frente, entrecejo y patas de gallo. Resultado natural en 7-14 días.",
+      "duracion": "20 min",
+      "resultados": "3 a 6 meses",
+      "anestesia": "No requiere",
+      "url": "/medicina-estetica/botox-toxina-botulinica/",
+      "imagen": "/assets/static/images/estetica1.jpg"
+    },
+    {
+      "id": "acido-hialuronico",
+      "categoria": "Medicina estética facial",
+      "titulo": "Ácido Hialurónico",
+      "claim": "Volumen, hidratación y armonía facial",
+      "descripcion": "Rellenos para labios, ojeras, pómulos y mentón con marcas reabsorbibles certificadas. Diseño facial personalizado.",
+      "duracion": "30-45 min",
+      "resultados": "9 a 18 meses",
+      "anestesia": "Tópica",
+      "url": "/medicina-estetica/acido-hialuronico/",
+      "imagen": "/assets/static/images/estetica2.jpg"
+    },
+    {
+      "id": "hilos-tensores",
+      "categoria": "Medicina estética facial",
+      "titulo": "Hilos Tensores",
+      "claim": "Lifting sin cirugía con efecto inmediato",
+      "descripcion": "Hilos PDO y bio-estimulantes para reposicionar tejidos y estimular colágeno en óvalo facial, cuello y mejillas.",
+      "duracion": "45-60 min",
+      "resultados": "12 a 18 meses",
+      "anestesia": "Local",
+      "url": "/medicina-estetica/hilos-tensores/",
+      "imagen": "/assets/static/images/estetica3.jpg"
+    },
+    {
+      "id": "peelings",
+      "categoria": "Medicina estética facial",
+      "titulo": "Peelings Químicos",
+      "claim": "Renueva la piel y unifica el tono",
+      "descripcion": "Peelings médicos a medida (TCA, mandélico, glicólico) para tratar manchas, acné, poros abiertos y textura.",
+      "duracion": "30 min",
+      "resultados": "Progresivo · 2-4 sesiones",
+      "anestesia": "No requiere",
+      "url": "/medicina-estetica/peelings-quimicos/",
+      "imagen": "/assets/static/images/estetica1.jpg"
+    },
+    {
+      "id": "mesoterapia",
+      "categoria": "Medicina estética facial",
+      "titulo": "Mesoterapia Facial",
+      "claim": "Hidratación profunda con vitaminas y antioxidantes",
+      "descripcion": "Microinyecciones de cócteles vitamínicos, ácido hialurónico no reticulado y aminoácidos para luminosidad y firmeza.",
+      "duracion": "30 min",
+      "resultados": "Acumulativo · 3-5 sesiones",
+      "anestesia": "Tópica opcional",
+      "url": "/medicina-estetica/mesoterapia-facial/",
+      "imagen": "/assets/static/images/estetica2.jpg"
+    },
+    {
+      "id": "implantes",
+      "categoria": "Odontología",
+      "titulo": "Implantes Dentales",
+      "claim": "Recupera dientes con la sensación de los tuyos",
+      "descripcion": "Implantes de titanio de marcas premium (Straumann, Nobel) con planificación digital 3D y carga inmediata cuando es posible.",
+      "duracion": "Sesión 60-90 min",
+      "resultados": "Definitivo · 25+ años",
+      "anestesia": "Local · sedación opcional",
+      "url": "/odontologia/implantes-dentales/",
+      "imagen": "/assets/static/images/estetica1.jpg"
+    },
+    {
+      "id": "ortodoncia-invisible",
+      "categoria": "Odontología",
+      "titulo": "Ortodoncia Invisible",
+      "claim": "Alinea tus dientes sin que se note",
+      "descripcion": "Tratamientos con Invisalign® y alineadores transparentes con plan 3D virtual antes de empezar.",
+      "duracion": "6-18 meses",
+      "resultados": "Definitivo",
+      "anestesia": "No requiere",
+      "url": "/odontologia/ortodoncia-invisible/",
+      "imagen": "/assets/static/images/estetica2.jpg"
+    },
+    {
+      "id": "blanqueamiento",
+      "categoria": "Odontología",
+      "titulo": "Blanqueamiento Dental",
+      "claim": "Sonrisa más blanca en una sola sesión",
+      "descripcion": "Blanqueamiento profesional combinado en clínica + férulas para domicilio. Hasta 8 tonos más claro.",
+      "duracion": "60-90 min",
+      "resultados": "12-24 meses",
+      "anestesia": "No requiere",
+      "url": "/odontologia/blanqueamiento-dental/",
+      "imagen": "/assets/static/images/estetica3.jpg"
+    },
+    {
+      "id": "carillas",
+      "categoria": "Odontología",
+      "titulo": "Carillas Dentales",
+      "claim": "Diseña tu sonrisa con carillas ultrafinas",
+      "descripcion": "Carillas de porcelana e.max y composite con previsualización digital de la sonrisa antes del tratamiento.",
+      "duracion": "2-3 sesiones",
+      "resultados": "10-15 años",
+      "anestesia": "No requiere o local",
+      "url": "/odontologia/carillas-dentales/",
+      "imagen": "/assets/static/images/estetica1.jpg"
+    }
+  ],
+
+  "equipo": [
+    {
+      "nombre": "Núria Fontana",
+      "rol": "Enfermera y coordinadora de pacientes",
+      "colegiado": "Col. Enfermería Barcelona Nº 12998",
+      "bio": "Enfermera especializada en cuidado peri-tratamiento estético. Coordina la experiencia del paciente desde la primera visita hasta el seguimiento.",
+      "especialidades": ["Asesoramiento", "Cuidado post-tratamiento", "Aparatología facial"],
+      "imagen": "/assets/static/images/team-nuria.jpg"
+    }
+  ],
+
+  "valores": [
+    {
+      "titulo": "Medicina, no peluquería estética",
+      "descripcion": "Solo médicos y odontólogos colegiados realizan tratamientos. Nunca delegamos en personal no titulado."
+    },
+    {
+      "titulo": "Resultados naturales",
+      "descripcion": "Nuestra firma es que se note que estás mejor, no que te has tratado. Diseñamos en proporción a tu rostro y a tu edad."
+    },
+    {
+      "titulo": "Diagnóstico antes de venta",
+      "descripcion": "La primera visita siempre incluye estudio facial o exploración dental completa. Si no necesitas un tratamiento, te lo decimos."
+    },
+    {
+      "titulo": "Marcas con trazabilidad",
+      "descripcion": "Solo trabajamos con productos certificados (Allergan, Galderma, Teoxane, Straumann, Nobel Biocare) y registramos cada lote."
+    }
+  ],
+
+  "testimonios": [
+    {
+      "nombre": "Anna M.",
+      "ciudad": "Sant Boi de Llobregat",
+      "tratamiento": "Ácido hialurónico labios y ojeras",
+      "comentario": "Tenía miedo de quedar exagerada y ha sido al revés: la gente nota que me veo descansada pero nadie sabe qué me he hecho. Te explican todo paso a paso antes de empezar.",
+      "rating": 5
+    },
+    {
+      "nombre": "Joan R.",
+      "ciudad": "Cornellà de Llobregat",
+      "tratamiento": "Implante dental + corona",
+      "comentario": "Llevaba años con un puente que se movía. Planificaron el implante con imagen 3D y a los 3 meses tenía la corona puesta. No siento diferencia con un diente real.",
+      "rating": 5
+    },
+    {
+      "nombre": "Laura B.",
+      "ciudad": "Viladecans",
+      "tratamiento": "Invisalign 14 meses",
+      "comentario": "Me he hecho la ortodoncia trabajando de cara al público y nadie se ha enterado. El control con la app y las revisiones cada 6 semanas hicieron que fuera muy llevadero.",
+      "rating": 5
+    },
+    {
+      "nombre": "Carmen S.",
+      "ciudad": "Sant Joan Despí",
+      "tratamiento": "Antiarrugas + peeling combinado",
+      "comentario": "Lo que más valoro es que me dijeron que no necesitaba relleno, solo un poco de toxina. En otros sitios te quieren vender de todo. Aquí cobras por lo que necesitas.",
+      "rating": 5
+    }
+  ],
+
+  "faq_global": [
+    {
+      "pregunta": "¿Qué tratamientos ofrecéis en Clínica Estética Sant Boi?",
+      "respuesta": "Realizamos medicina estética facial (bótox, ácido hialurónico, hilos tensores, peelings y mesoterapia) y odontología completa (implantes dentales, ortodoncia invisible Invisalign, blanqueamiento, carillas y estética dental). Todos los tratamientos los realizan médicos y odontólogos colegiados."
+    },
+    {
+      "pregunta": "¿Dónde está Clínica Estética Sant Boi?",
+      "respuesta": "Estamos en Carrer Francesc Macià 11, 08830 Sant Boi de Llobregat (Barcelona) — Centre Mèdic Basté (sede Estètic). En el centro de Sant Boi, con parking privado y a pocos minutos de la estación de Renfe. Atendemos también a pacientes de Cornellà, Sant Joan Despí, Viladecans, El Prat y Barcelona ciudad."
+    },
+    {
+      "pregunta": "¿Cuánto cuesta la primera visita?",
+      "respuesta": "La primera visita de medicina estética y la valoración odontológica son gratuitas y sin compromiso. Incluyen exploración, estudio facial o dental y presupuesto cerrado por escrito. Si decides no tratarte no se te cobra nada."
+    },
+    {
+      "pregunta": "¿Los tratamientos son seguros?",
+      "respuesta": "Sí. Solo utilizamos productos con marcado CE y registro sanitario (Allergan, Galderma, Teoxane, Straumann, Nobel Biocare). Cada paciente firma consentimiento informado y guardamos trazabilidad completa de los lotes utilizados. Nuestros profesionales están colegiados y la clínica está registrada como centro sanitario en la Generalitat de Catalunya."
+    },
+    {
+      "pregunta": "¿Tenéis financiación?",
+      "respuesta": "Sí. Ofrecemos financiación hasta 36 meses sin intereses (TIN 0%, TAE 0%) en tratamientos a partir de 600 €, sujeta a aprobación de la entidad financiera. Para implantología y ortodoncia disponemos de planes de hasta 60 meses."
+    },
+    {
+      "pregunta": "¿Atendéis en catalán?",
+      "respuesta": "Sí, atendemos indistintamente en catalán y castellano. También en inglés y francés."
+    }
+  ],
+
+  "logos_marcas": [
+    "Allergan",
+    "Galderma",
+    "Teoxane",
+    "Mesoestetic",
+    "Straumann",
+    "Nobel Biocare",
+    "Invisalign",
+    "Ivoclar Vivadent"
+  ],
+
+  "stats": [
+    { "valor": "12", "unidad": "años", "label": "ayudando a pacientes en el Baix Llobregat" },
+    { "valor": "+8.500", "unidad": "", "label": "tratamientos realizados" },
+    { "valor": "4,9 / 5", "unidad": "", "label": "valoración media en Google" },
+    { "valor": "100%", "unidad": "", "label": "tratamientos por médico u odontólogo colegiado" }
+  ]
+}

@@ -1,0 +1,274 @@
+---
+layout: layout/base.njk
+permalink: /
+title: "Clínica Estética y Dental en Sant Boi de Llobregat"
+metaTitle: "Clínica Estética Sant Boi · Medicina estética y odontología en Baix Llobregat"
+metaDescription: "Clínica de medicina estética facial y odontología en Sant Boi de Llobregat (Barcelona). Bótox, ácido hialurónico, hilos tensores, implantes dentales, ortodoncia invisible y carillas. Médicos colegiados, resultados naturales y primera visita gratuita."
+metaKeywords: "clínica estética Sant Boi, medicina estética Sant Boi, dentista Sant Boi, odontología Sant Boi, bótox Sant Boi, ácido hialurónico Sant Boi, implantes dentales Sant Boi, Invisalign Sant Boi, blanqueamiento dental Sant Boi, clínica dental Baix Llobregat"
+ogType: website
+pageType: home
+---
+
+{# ─── HERO (Amrē-style full-bleed) ────────────────────────── #}
+<section class="hero">
+  <div class="hero__bg">
+    <img src="/assets/static/images/home.jpeg" alt="Centre Mèdic Basté · Clínica Estética en Sant Boi de Llobregat" loading="eager" fetchpriority="high">
+  </div>
+
+  {# Decorative organic curves #}
+  <div class="hero__ornament" aria-hidden="true">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-100 350 C 200 100, 500 600, 900 300 S 1500 600, 1800 200" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+      <path d="M-50 600 C 300 450, 700 800, 1100 550 S 1700 700, 1850 450" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+      <circle cx="1280" cy="320" r="6" stroke="currentColor" stroke-width="1" fill="none" opacity="0.6"/>
+      <circle cx="380" cy="180" r="3" fill="currentColor" opacity="0.7"/>
+    </svg>
+  </div>
+
+  <div class="hero__inner">
+    <div class="hero__copy fade-in">
+      <span class="eyebrow">Sant Boi · Medicina estética & odontología</span>
+      <h1 class="hero__title">
+        Donde la <em>medicina</em><br>
+        encuentra la<br>
+        belleza natural
+      </h1>
+      <p class="hero__lead lead">
+        Medicina estética facial y odontología avanzada en {{ global.ciudad }}.
+        Tratamientos hechos por médicos colegiados, con criterio clínico y diseñados
+        para que se note que estás mejor — no que te has tratado.
+      </p>
+      <span class="hero__tag">Aceptamos pacientes nuevos</span>
+      <div class="hero__cta">
+        <a href="/medicina-estetica/" class="btn">Ver tratamientos</a>
+        <a href="/contacto/" class="btn btn--primary">Reservar primera visita</a>
+      </div>
+    </div>
+    <div class="hero__visual" aria-hidden="true"></div>
+  </div>
+</section>
+
+{# ─── DUAL PORTRAITS / ABOUT ─────────────────────────────── #}
+<section class="dual-portraits">
+  <div class="dual-portraits__grid">
+    <div class="dual-portraits__img dual-portraits__img--top fade-in">
+      <img src="/assets/static/images/estetica2.jpg" alt="Paciente tras tratamiento de medicina estética facial" loading="lazy">
+    </div>
+
+    <div class="dual-portraits__text-l fade-in">
+      <span class="eyebrow">Sobre la clínica</span>
+      <div class="dual-portraits__brand serif">Sant Boi</div>
+      <p class="dual-portraits__lede">
+        Nuestra clínica está dedicada a ofrecer cuidado médico personalizado,
+        utilizando las tecnologías más avanzadas y métodos científicos actualizados.
+        Diseñamos planes de tratamiento que no solo son altamente efectivos, sino
+        también pensados para responder a las necesidades específicas de cada paciente.
+      </p>
+    </div>
+
+    <div class="dual-portraits__text-r fade-in" style="padding-top:120px">
+      <p>
+        En {{ global.empresa }} entendemos que la belleza real va más allá de la
+        superficie. Por eso hemos creado un entorno que prioriza el confort y la
+        relajación. Desde el momento en que cruzas la puerta queremos que te sientas
+        en casa: nuestra clínica respira tranquilidad, un espacio diseñado para tu
+        consulta y tu tratamiento, pero también para tu paz mental.
+      </p>
+      <a href="/medicina-estetica/" class="btn btn--ghost btn--sm" style="margin-top:24px;border-color:var(--c-line);color:var(--c-ink)">Nuestros servicios ↗</a>
+    </div>
+
+    <div class="dual-portraits__img dual-portraits__img--bottom fade-in">
+      <img src="/assets/static/images/estetica3.jpg" alt="Paciente tras tratamiento odontológico estético" loading="lazy">
+    </div>
+  </div>
+</section>
+
+{# ─── BIG EDITORIAL STATEMENT ─────────────────────────────── #}
+<section class="big-statement">
+  <p class="big-statement__text fade-in">
+    {{ global.empresa_corto }}: Donde el <em>cuidado</em> se encuentra<br>
+    con la innovación, y cada detalle<br>
+    refleja una <em>promesa</em> hacia ti.
+  </p>
+</section>
+
+{# ─── CLINIC SHOWCASE ─────────────────────────────────────── #}
+<section class="clinic-showcase">
+  <div class="clinic-showcase__grid">
+    <div class="clinic-showcase__img fade-in">
+      <img src="/assets/static/images/estetica1.jpg" alt="Interior de Clínica Estética Sant Boi en Sant Boi de Llobregat" loading="lazy">
+    </div>
+
+    <div class="fade-in">
+      <h2 class="clinic-showcase__title">Nuestra clínica<br>en Sant Boi</h2>
+      <p class="clinic-showcase__text">
+        {{ global.empresa }} es más que una clínica: es el reflejo de la pasión,
+        la dedicación y la auténtica vocación de cuidado de su equipo. Hemos volcado
+        nuestro corazón en crear un espacio donde la experiencia de cada paciente
+        sea excepcional. Desde la tecnología puntera hasta una atmósfera acogedora,
+        cada detalle se ha pensado para hacer tu paso por aquí único.
+      </p>
+    </div>
+
+    <div class="clinic-showcase__caption fade-in">
+      <div class="clinic-showcase__blob"></div>
+      <p class="clinic-showcase__caption-text">Cuidado apasionadamente diseñado, para una atención excepcional.</p>
+    </div>
+  </div>
+</section>
+
+{# ─── TWO BIG SERVICE CARDS ───────────────────────────────── #}
+<section class="services-showcase">
+  <div class="services-showcase__head">
+    <h2 class="services-showcase__title">Servicios</h2>
+  </div>
+
+  <div class="services-showcase__grid">
+    <a href="/medicina-estetica/" class="svc-card fade-in">
+      <img src="/assets/static/images/estetica2.jpg" alt="Medicina estética facial en Clínica Sant Boi">
+      <div class="svc-card__body">
+        <h3 class="svc-card__title">Medicina Estética</h3>
+        <p class="svc-card__desc">Transformamos tu rostro con cuidado avanzado y precisión médica.</p>
+      </div>
+    </a>
+
+    <a href="/odontologia/" class="svc-card fade-in">
+      <img src="/assets/static/images/estetica3.jpg" alt="Odontología digital en Clínica Sant Boi">
+      <div class="svc-card__body">
+        <h3 class="svc-card__title">Odontología</h3>
+        <p class="svc-card__desc">Implantes, ortodoncia invisible y diseño de sonrisa con planificación digital.</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="services-showcase__more">
+    <a href="/medicina-estetica/" class="btn btn--ghost btn--sm" style="border-color:var(--c-line);color:var(--c-ink)">Todos los servicios ↗</a>
+  </div>
+</section>
+
+{# ─── EXPLORE ALL TREATMENTS (filterable grid) ────────────── #}
+<section class="treatments-grid">
+  <div class="treatments-grid__head">
+    <h2 class="treatments-grid__title">Explora todos<br>los tratamientos</h2>
+    <div class="treatments-filters" role="tablist">
+      <a href="/medicina-estetica/" class="is-active">Medicina Estética</a>
+      <a href="/odontologia/">Odontología</a>
+      <a href="/preguntas-frecuentes/">FAQs</a>
+    </div>
+  </div>
+
+  <div class="treatments-grid__list">
+    {% set tx_list = [
+      { num: '01', titulo: 'Antiarrugas', url: '/medicina-estetica/botox-toxina-botulinica/' },
+      { num: '02', titulo: 'Ácido Hialurónico', url: '/medicina-estetica/acido-hialuronico/' },
+      { num: '03', titulo: 'Hilos Tensores', url: '/medicina-estetica/hilos-tensores/' },
+      { num: '04', titulo: 'Peelings Químicos', url: '/medicina-estetica/peelings-quimicos/' },
+      { num: '05', titulo: 'Mesoterapia Facial', url: '/medicina-estetica/mesoterapia-facial/' },
+      { num: '06', titulo: 'Armonización Facial', url: '/medicina-estetica/acido-hialuronico/' },
+      { num: '07', titulo: 'Relleno de Labios', url: '/medicina-estetica/acido-hialuronico/' },
+      { num: '08', titulo: 'Relleno de Ojeras', url: '/medicina-estetica/acido-hialuronico/' },
+      { num: '09', titulo: 'Antiarrugas Preventivo', url: '/medicina-estetica/botox-toxina-botulinica/' },
+      { num: '10', titulo: 'Implantes Dentales', url: '/odontologia/implantes-dentales/' },
+      { num: '11', titulo: 'Ortodoncia Invisible', url: '/odontologia/ortodoncia-invisible/' },
+      { num: '12', titulo: 'Blanqueamiento Dental', url: '/odontologia/blanqueamiento-dental/' },
+      { num: '13', titulo: 'Carillas Dentales', url: '/odontologia/carillas-dentales/' },
+      { num: '14', titulo: 'Diseño de Sonrisa', url: '/odontologia/carillas-dentales/' },
+      { num: '15', titulo: 'Estética Dental', url: '/odontologia/' }
+    ] %}
+    {% for t in tx_list %}
+    <a href="{{ t.url }}" class="tx-card">
+      <div class="tx-card__num">{{ t.num }}</div>
+      <div class="tx-card__title">{{ t.titulo }}</div>
+      <div class="tx-card__arrow">↗</div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+{# ─── STATS ──────────────────────────────────────────────── #}
+<section style="background:var(--c-bg-alt)">
+  <div class="wrap">
+    <div class="stats">
+      {% for stat in site.stats %}
+      <div class="stat fade-in">
+        <div class="stat__value">{{ stat.valor }}<sup>{{ stat.unidad }}</sup></div>
+        <div class="stat__label">{{ stat.label }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ─── TESTIMONIALS ───────────────────────────────────────── #}
+<section>
+  <div class="wrap">
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">Lo que dicen nuestros pacientes</span>
+        <h2 class="serif">Reseñas reales del Baix Llobregat</h2>
+      </div>
+      <div class="section-intro__text">
+        <p>Más de 187 valoraciones de Google con una media de 4,9/5.</p>
+      </div>
+    </div>
+
+    <div class="testimonials mt-12">
+      {% for t in site.testimonios %}
+      <article class="testimonial fade-in">
+        <div class="testimonial__rating" aria-label="{{ t.rating }} de 5 estrellas">★★★★★</div>
+        <p class="testimonial__text">"{{ t.comentario }}"</p>
+        <div class="testimonial__author">
+          <strong>{{ t.nombre }}</strong>
+          <span>{{ t.tratamiento }} · {{ t.ciudad }}</span>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ─── CONTACT BAR ────────────────────────────────────────── #}
+<section class="contact-bar">
+  <div class="wrap">
+    <div class="contact-bar__grid">
+      <div>
+        <span class="eyebrow">Reserva tu primera visita</span>
+        <h2 class="serif">A 5 minutos de la estación de Renfe Sant Boi.</h2>
+        <p class="lead mt-4">Atendemos pacientes de Sant Boi, Cornellà, Sant Joan Despí, Viladecans, El Prat y Barcelona ciudad.</p>
+        <div class="hero__cta">
+          <a href="/contacto/" class="btn btn--gold btn--lg">Reservar visita gratuita</a>
+          <a href="https://wa.me/{{ global.whatsapp }}" class="btn btn--ghost btn--lg" style="border-color:#F4F1EC;color:#F4F1EC">WhatsApp directo</a>
+        </div>
+      </div>
+      <dl>
+        <dt>Dirección</dt><dd>{{ global.direccion }}<br>{{ global.codigopostal }} {{ global.ciudad }}</dd>
+        <dt>Teléfono</dt><dd><a href="tel:{{ global.telefono_link }}">{{ global.telefono_visible }}</a></dd>
+        <dt>Email</dt><dd><a href="mailto:{{ global.email }}">{{ global.email }}</a></dd>
+        <dt>Horario</dt><dd>{{ global.horario_visible }}</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+{# ─── FAQ ──────────────────────────────────────────────────── #}
+<section class="bg-bg-alt">
+  <div class="wrap">
+    <div class="section-intro section-intro--center">
+      <div class="section-intro__text">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2 class="serif">Lo que solemos resolver antes de la primera visita</h2>
+      </div>
+    </div>
+    <div class="faq mt-12">
+      {% for f in site.faq_global %}
+      <details class="faq__item"{% if loop.first %} open{% endif %}>
+        <summary class="faq__q">{{ f.pregunta }}</summary>
+        <div class="faq__a"><p>{{ f.respuesta }}</p></div>
+      </details>
+      {% endfor %}
+    </div>
+    <p class="center mt-8"><a href="/preguntas-frecuentes/" class="btn--link">Ver todas las preguntas frecuentes</a></p>
+  </div>
+</section>
+
+{% set faqSchema = site.faq_global %}

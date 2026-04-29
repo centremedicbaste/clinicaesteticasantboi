@@ -1,0 +1,43 @@
+---
+layout: layout/base.njk
+permalink: /blog/
+title: "Blog · Clínica Estética Sant Boi"
+metaTitle: "Blog · Medicina estética y odontología en Sant Boi"
+metaDescription: "Artículos sobre medicina estética facial y odontología escritos por nuestro equipo médico colegiado. Información médica clara y honesta para tomar mejores decisiones."
+pageType: blog
+---
+
+<section style="padding-top:140px">
+  <div class="wrap">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      <ol><li><a href="/">Inicio</a></li><li aria-current="page">Blog</li></ol>
+    </nav>
+
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">Blog médico</span>
+        <h1 class="serif">Información clara, escrita por <em style="font-style:italic;color:var(--c-accent)">médicos</em></h1>
+      </div>
+      <div class="section-intro__text">
+        <p class="lead">Artículos sobre medicina estética facial y odontología, escritos por nuestros profesionales. Sin marketing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper">
+  <div class="wrap">
+    <div class="grid grid-3">
+      {% for post in collections.blog | reverse %}
+      <a href="{{ post.url }}" class="article-preview fade-in">
+        <div class="article-preview__media"><img src="{{ post.data.cover or '/assets/static/images/estetica1.jpg' }}" alt="{{ post.data.title }}" loading="lazy"></div>
+        <div>
+          <span class="article-preview__date">{{ post.data.category or 'Salud' }} · {{ post.date | postDate }}</span>
+          <h2 class="article-preview__title serif">{{ post.data.title }}</h2>
+          <p class="article-preview__excerpt">{{ post.data.excerpt }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

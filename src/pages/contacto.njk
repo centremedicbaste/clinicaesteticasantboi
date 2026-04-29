@@ -1,0 +1,107 @@
+---
+layout: layout/base.njk
+permalink: /contacto/
+title: "Contacto · Clínica Estética Sant Boi"
+metaTitle: "Contacto · Reservar primera visita en Clínica Estética Sant Boi"
+metaDescription: "Reserva tu primera visita gratuita en Clínica Estética Sant Boi (Centre Mèdic Basté). Carrer Francesc Macià 11, 08830 Sant Boi de Llobregat. Teléfono 695 69 75 04 · WhatsApp · Formulario online."
+metaKeywords: "contacto Clínica Estética Sant Boi, reservar cita medicina estética Sant Boi, Centre Mèdic Basté contacto, Francesc Macià Sant Boi"
+pageType: contact
+---
+
+<section style="padding-top:140px">
+  <div class="wrap">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      <ol><li><a href="/">Inicio</a></li><li aria-current="page">Contacto</li></ol>
+    </nav>
+
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">Reserva tu primera visita</span>
+        <h1 class="serif">Hablemos.</h1>
+      </div>
+      <div class="section-intro__text">
+        <p class="lead">La primera visita es gratuita y sin compromiso. Incluye exploración, estudio facial o dental y presupuesto por escrito.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper">
+  <div class="wrap">
+    <div class="grid" style="grid-template-columns:1.1fr .9fr;gap:80px;align-items:start">
+      <div class="fade-in">
+        <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contacto">
+          <p hidden><label>Bot: <input name="bot-field"></label></p>
+
+          <div class="form-grid">
+            <div class="field"><label for="nombre">Nombre</label><input type="text" name="nombre" id="nombre" required></div>
+            <div class="field"><label for="apellidos">Apellidos</label><input type="text" name="apellidos" id="apellidos" required></div>
+            <div class="field"><label for="email">Email</label><input type="email" name="email" id="email" required></div>
+            <div class="field"><label for="telefono">Teléfono</label><input type="tel" name="telefono" id="telefono" required></div>
+            <div class="field field--full">
+              <label for="tratamiento">Tratamiento que te interesa</label>
+              <select name="tratamiento" id="tratamiento">
+                <option value="">— Selecciona —</option>
+                <optgroup label="Medicina Estética">
+                  <option>Antiarrugas</option>
+                  <option>Ácido Hialurónico</option>
+                  <option>Hilos Tensores</option>
+                  <option>Peelings Químicos</option>
+                  <option>Mesoterapia Facial</option>
+                </optgroup>
+                <optgroup label="Odontología">
+                  <option>Implantes Dentales</option>
+                  <option>Ortodoncia Invisible · Invisalign</option>
+                  <option>Blanqueamiento Dental</option>
+                  <option>Carillas Dentales</option>
+                </optgroup>
+                <option>Otro / consulta general</option>
+              </select>
+            </div>
+            <div class="field field--full"><label for="mensaje">Cuéntanos brevemente qué necesitas</label><textarea name="mensaje" id="mensaje" rows="5"></textarea></div>
+            <label class="field--check">
+              <input type="checkbox" required>
+              <span>He leído y acepto la <a href="/politica-privacidad/" style="text-decoration:underline">política de privacidad</a>. Mis datos se utilizarán exclusivamente para gestionar la cita y nunca se compartirán con terceros.</span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg" style="margin-top:24px">Solicitar primera visita</button>
+        </form>
+      </div>
+
+      <aside class="fade-in" style="background:var(--c-bg-alt);padding:40px;border-radius:var(--r-lg);position:sticky;top:120px">
+        <h3 class="serif" style="margin-bottom:24px">Contacto directo</h3>
+        <dl style="display:grid;gap:18px;font-size:.92rem">
+          <div>
+            <dt style="font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--c-muted);margin-bottom:4px">Teléfono</dt>
+            <dd><a href="tel:{{ global.telefono_link }}" style="font-size:1.1rem;color:var(--c-accent);text-decoration:underline;text-underline-offset:4px">{{ global.telefono_visible }}</a></dd>
+          </div>
+          <div>
+            <dt style="font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--c-muted);margin-bottom:4px">WhatsApp</dt>
+            <dd><a href="https://wa.me/{{ global.whatsapp }}" style="color:var(--c-accent);text-decoration:underline;text-underline-offset:4px">{{ global.whatsapp_visible }}</a></dd>
+          </div>
+          <div>
+            <dt style="font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--c-muted);margin-bottom:4px">Email</dt>
+            <dd><a href="mailto:{{ global.email }}" style="color:var(--c-accent);text-decoration:underline;text-underline-offset:4px">{{ global.email }}</a></dd>
+          </div>
+          <div>
+            <dt style="font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--c-muted);margin-bottom:4px">Dirección</dt>
+            <dd>{{ global.direccion }}<br>{{ global.codigopostal }} {{ global.ciudad }}<br>{{ global.provincia }}</dd>
+          </div>
+          <div>
+            <dt style="font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--c-muted);margin-bottom:4px">Horario</dt>
+            <dd>{{ global.horario_visible }}</dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section style="padding:0 0 80px">
+  <div class="wrap">
+    <div class="map">
+      <iframe src="{{ global.googlemaps_iframe }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de Clínica Estética Sant Boi"></iframe>
+    </div>
+  </div>
+</section>

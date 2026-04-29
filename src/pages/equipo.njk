@@ -1,0 +1,68 @@
+---
+layout: layout/base.njk
+permalink: /equipo/
+title: "Equipo médico de Clínica Estética Sant Boi"
+metaTitle: "Equipo médico · Clínica Estética Sant Boi"
+metaDescription: "Conoce al equipo médico colegiado de Clínica Estética Sant Boi (Centre Mèdic Basté). Todos los tratamientos invasivos los realizan médicos y odontólogos colegiados, sin personal no titulado."
+metaKeywords: "equipo médico Sant Boi, doctora medicina estética Sant Boi, dentista Sant Boi"
+pageType: about
+---
+
+{% set breadcrumbs = [{ label: 'Inicio', url: '/' }, { label: 'Equipo', url: '/equipo/' }] %}
+
+<section style="padding-top:140px">
+  <div class="wrap">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      <ol>
+        <li><a href="/">Inicio</a></li>
+        <li aria-current="page">Equipo</li>
+      </ol>
+    </nav>
+
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">Equipo médico</span>
+        <h1 class="serif">Las personas que te atenderán <em style="font-style:italic;color:var(--c-accent)">de verdad</em></h1>
+      </div>
+      <div class="section-intro__text">
+        <p class="lead">Médicos y odontólogos colegiados con formación universitaria certificada y experiencia real. Sin personal no titulado realizando tratamientos invasivos. Punto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper">
+  <div class="wrap">
+    <div class="team">
+      {% for m in site.equipo %}
+      <article class="team-member fade-in">
+        <div class="team-member__photo"><img src="{{ m.imagen or '/assets/static/images/estetica1.jpg' }}" alt="{{ m.nombre }}" loading="lazy"></div>
+        <div>
+          <p class="team-member__role">{{ m.rol }}</p>
+          <h2 class="team-member__name serif">{{ m.nombre }}</h2>
+          <p class="team-member__col">{{ m.colegiado }}</p>
+        </div>
+        <p class="team-member__bio">{{ m.bio }}</p>
+        {% if m.especialidades %}
+        <ul class="tag-list">
+          {% for e in m.especialidades %}<li class="tag">{{ e }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="contact-bar">
+  <div class="wrap">
+    <div class="contact-bar__grid">
+      <div>
+        <span class="eyebrow">Reserva con tu profesional</span>
+        <h2 class="serif">Habla directamente con quien va a tratarte.</h2>
+        <p class="lead mt-4">La primera visita es siempre con el médico o odontólogo que se hará cargo de tu tratamiento. No con un comercial.</p>
+        <a href="/contacto/" class="btn btn--gold btn--lg">Reservar primera visita</a>
+      </div>
+    </div>
+  </div>
+</section>

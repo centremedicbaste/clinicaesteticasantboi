@@ -1,9 +1,8 @@
-
 {
-	"layout": "templates/_bloginner.njk",
-	"author": "Toldos marfil",
-	"tags": ["blog"],
-	"tag": "post",
-	"categoryName": "Blog",
-	"permalink": "blog/{{ page.fileSlug }}/"
+  "layout": "layout/base.njk",
+  "author": "Clínica Estética Sant Boi",
+  "tags": ["blog"],
+  "tag": "post",
+  "categoryName": "Blog",
+  "permalink": "blog/{{ page.fileSlug }}/"
 }

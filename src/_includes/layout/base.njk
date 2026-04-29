@@ -1,122 +1,217 @@
 <!DOCTYPE html>
-<html lang="{{global.lang}}">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-site-verification" content="{{ global.search_console }}" />
-    <title>{{ metaTitle }}</title>
-    <meta name="robots" content="{{ metaRobots }}" />
-    <meta name="description" content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}" />
-    <meta name="keywords" content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}" />
-    <link rel="manifest" href="/site.webmanifest">
+<html lang="{{ global.lang }}" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <link rel="icon" type="image/webp" href="{{ global.url }}/assets/static/about.jpg" />
+  {# ─── PRIMARY META ──────────────────────────────────────────── #}
+  <title>{{ metaTitle or title }}</title>
+  <meta name="description" content="{{ metaDescription }}">
+  {% if metaKeywords %}<meta name="keywords" content="{{ metaKeywords }}">{% endif %}
+  <meta name="robots" content="{{ metaRobots or 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' }}">
+  <meta name="author" content="{{ global.empresa_legal }}">
+  <meta name="generator" content="Eleventy">
+  <meta name="theme-color" content="{{ global.design_tokens.c_bg }}">
+  <meta name="format-detection" content="telephone=yes">
+  <meta name="geo.region" content="ES-CT">
+  <meta name="geo.placename" content="{{ global.ciudad }}">
+  <meta name="geo.position" content="{{ global.geo_lat }};{{ global.geo_lng }}">
+  <meta name="ICBM" content="{{ global.geo_lat }}, {{ global.geo_lng }}">
 
-    <style>
-      :root {
-        --c-accent: {{global.c_accent}};
-        --c-primary: {{global.c_primary}};
-        --c-secondary: {{global.c_secondary}};
-        --bg-dark: {{global.bg_dark}};
-        --c-bg-dark: {{global.c_bg_dark}};
-        --bg-light: {{global.bg_light}};
-        --bg-white: {{global.bg_white}};
-        --c-bg-light: {{global.c_bg_light}};
-        --btn-radius: {{global.btn_radius}};
-        --padding-global: {{global.padding_global}};
-        --btn-radius: {{global.btn_radius}};
+  {# ─── CANONICAL + HREFLANG ─────────────────────────────────── #}
+  <link rel="canonical" href="{{ global.url }}{{ page.url }}">
+  <link rel="alternate" hreflang="es-ES" href="{{ global.url }}{{ page.url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ global.url }}{{ page.url }}">
+
+  {# ─── OPEN GRAPH ──────────────────────────────────────────── #}
+  <meta property="og:type" content="{{ ogType or 'website' }}">
+  <meta property="og:site_name" content="{{ global.empresa }}">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="{{ metaTitle or title }}">
+  <meta property="og:description" content="{{ metaDescription }}">
+  <meta property="og:url" content="{{ global.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ global.url }}{{ ogImage or global.og_image }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ metaTitle or title }}">
+
+  {# ─── TWITTER ─────────────────────────────────────────────── #}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="{{ global.social_handle }}">
+  <meta name="twitter:title" content="{{ metaTitle or title }}">
+  <meta name="twitter:description" content="{{ metaDescription }}">
+  <meta name="twitter:image" content="{{ global.url }}{{ ogImage or global.og_image }}">
+
+  {# ─── ICONS / MANIFEST ────────────────────────────────────── #}
+  <link rel="icon" href="/assets/static/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/assets/static/favicons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/static/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  {# ─── SEARCH CONSOLE ──────────────────────────────────────── #}
+  {% if global.search_console %}<meta name="google-site-verification" content="{{ global.search_console }}">{% endif %}
+
+  {# ─── FONTS (preconnect + preload) ────────────────────────── #}
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap">
+
+  {# ─── CSS TOKENS + STYLESHEET ─────────────────────────────── #}
+  <style>
+    :root{
+      --c-bg:{{ global.design_tokens.c_bg }};
+      --c-bg-alt:{{ global.design_tokens.c_bg_alt }};
+      --c-paper:{{ global.design_tokens.c_paper }};
+      --c-ink:{{ global.design_tokens.c_ink }};
+      --c-ink-soft:{{ global.design_tokens.c_ink_soft }};
+      --c-muted:{{ global.design_tokens.c_muted }};
+      --c-line:{{ global.design_tokens.c_line }};
+      --c-accent:{{ global.design_tokens.c_accent }};
+      --c-accent-soft:{{ global.design_tokens.c_accent_soft }};
+      --c-sage:{{ global.design_tokens.c_sage }};
+      --c-sage-dark:{{ global.design_tokens.c_sage_dark }};
+      --c-gold:{{ global.design_tokens.c_gold }};
+      --c-warm:{{ global.design_tokens.c_warm }};
+      --r-lg:{{ global.design_tokens.radius_lg }};
+      --r-md:{{ global.design_tokens.radius_md }};
+      --r-sm:{{ global.design_tokens.radius_sm }};
+      --r-btn:{{ global.design_tokens.btn_radius }};
+      --pad:{{ global.design_tokens.padding_global }};
+      --maxw:{{ global.design_tokens.max_width }};
+      --maxt:{{ global.design_tokens.max_text }};
+      --ease:{{ global.design_tokens.ease }};
+    }
+  </style>
+  <link rel="stylesheet" href="/assets/css/showcase.css">
+
+  {# ─── JSON-LD : Organization / MedicalClinic / Dentist ──────── #}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["MedicalClinic","Dentist","LocalBusiness"],
+        "@id": "{{ global.url }}#clinic",
+        "name": "{{ global.empresa }}",
+        "alternateName": "{{ global.empresa_corto }}",
+        "legalName": "{{ global.empresa_legal }}",
+        "url": "{{ global.url }}",
+        "logo": "{{ global.url }}{{ global.logo }}",
+        "image": "{{ global.url }}{{ global.og_image }}",
+        "telephone": "{{ global.telefono_link }}",
+        "email": "{{ global.email }}",
+        "priceRange": "€€",
+        "currenciesAccepted": "EUR",
+        "paymentAccepted": "Cash, Credit Card, Financing",
+        "foundingDate": "{{ global.fundacion }}",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "{{ global.direccion }}",
+          "postalCode": "{{ global.codigopostal }}",
+          "addressLocality": "{{ global.ciudad }}",
+          "addressRegion": "{{ global.provincia }}",
+          "addressCountry": "{{ global.pais_codigo }}"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "{{ global.geo_lat }}",
+          "longitude": "{{ global.geo_lng }}"
+        },
+        "areaServed": [{% for area in global.area_servicio %}{ "@type":"City", "name":"{{ area }}" }{% if not loop.last %},{% endif %}{% endfor %}],
+        "openingHoursSpecification": [{% for h in global.horario_estructurado %}{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [{% for d in h.dias %}"https://schema.org/{% if d == 'Mo' %}Monday{% elif d == 'Tu' %}Tuesday{% elif d == 'We' %}Wednesday{% elif d == 'Th' %}Thursday{% elif d == 'Fr' %}Friday{% elif d == 'Sa' %}Saturday{% elif d == 'Su' %}Sunday{% endif %}"{% if not loop.last %},{% endif %}{% endfor %}],
+          "opens": "{{ h.abre }}",
+          "closes": "{{ h.cierra }}"
+        }{% if not loop.last %},{% endif %}{% endfor %}],
+        "sameAs": [
+          "{{ global.social_instagram }}",
+          "{{ global.social_facebook }}",
+          "{{ global.social_linkedin }}",
+          "{{ global.social_youtube }}",
+          "{{ global.social_tiktok }}"
+        ],
+        "medicalSpecialty": ["CosmeticDentistry","Dermatology","PlasticSurgery"],
+        "availableService": [
+          { "@type":"MedicalProcedure", "name":"Bótox - Toxina Botulínica", "url":"{{ global.url }}/medicina-estetica/botox-toxina-botulinica/" },
+          { "@type":"MedicalProcedure", "name":"Ácido Hialurónico", "url":"{{ global.url }}/medicina-estetica/acido-hialuronico/" },
+          { "@type":"MedicalProcedure", "name":"Hilos Tensores", "url":"{{ global.url }}/medicina-estetica/hilos-tensores/" },
+          { "@type":"MedicalProcedure", "name":"Peelings Químicos", "url":"{{ global.url }}/medicina-estetica/peelings-quimicos/" },
+          { "@type":"MedicalProcedure", "name":"Mesoterapia Facial", "url":"{{ global.url }}/medicina-estetica/mesoterapia-facial/" },
+          { "@type":"Dentistry", "name":"Implantes Dentales", "url":"{{ global.url }}/odontologia/implantes-dentales/" },
+          { "@type":"Dentistry", "name":"Ortodoncia Invisible", "url":"{{ global.url }}/odontologia/ortodoncia-invisible/" },
+          { "@type":"Dentistry", "name":"Blanqueamiento Dental", "url":"{{ global.url }}/odontologia/blanqueamiento-dental/" },
+          { "@type":"Dentistry", "name":"Carillas Dentales", "url":"{{ global.url }}/odontologia/carillas-dentales/" }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "187",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ global.url }}#website",
+        "url": "{{ global.url }}",
+        "name": "{{ global.empresa }}",
+        "publisher": { "@id": "{{ global.url }}#clinic" },
+        "inLanguage": "es-ES"
       }
-    </style>
+      {% if breadcrumbs %},
+      {
+        "@type": "BreadcrumbList",
+        "@id": "{{ global.url }}{{ page.url }}#breadcrumbs",
+        "itemListElement": [{% for b in breadcrumbs %}{
+          "@type":"ListItem",
+          "position": {{ loop.index }},
+          "name":"{{ b.label }}",
+          "item":"{{ global.url }}{{ b.url }}"
+        }{% if not loop.last %},{% endif %}{% endfor %}]
+      }{% endif %}
+      {% if pageSchema %},
+      {{ pageSchema | safe }}
+      {% endif %}
+      {% set _faq = faqSchema or (page.url == '/' and site.faq_global) or (page.url == '/preguntas-frecuentes/' and site.faq_global) %}
+      {% if _faq %},
+      {
+        "@type":"FAQPage",
+        "@id":"{{ global.url }}{{ page.url }}#faq",
+        "mainEntity": [{% for f in _faq %}{
+          "@type":"Question",
+          "name":"{{ f.pregunta | replace('"','\\"') }}",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"{{ f.respuesta | replace('"','\\"') }}"
+          }
+        }{% if not loop.last %},{% endif %}{% endfor %}]
+      }{% endif %}
+    ]
+  }
+  </script>
 
+  {% if global.tag_manager %}
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','{{ global.tag_manager }}');</script>
+  {% endif %}
+</head>
 
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="canonical" href="{{ global.url }}{{ page.url | url }}" />
+<body class="page page--{{ pageType or 'default' }}{% if page.url == '/' %} is-home{% endif %}" data-route="{{ page.url }}">
+  {% if global.tag_manager %}<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ global.tag_manager }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>{% endif %}
 
-    <meta property="og:site_name" content="{{ global.empresa }}" />
-    <meta
-      property="og:image"
-      content="{{ global.url }}/assets/static/images/2.webp"
-    />
-    <meta property="og:title" content="{{ title }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ global.url }}" />
-    <meta
-      property="og:description"
-      content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}"
-    />
+  <a class="skip-link" href="#main">Saltar al contenido</a>
 
-    {% if global.googlemaps_api %}
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "{{global.tag_manager}}");
-    </script>
-    {% endif %}
+  {% include "components/header.njk" %}
 
+  <main id="main">
+    {{ content | safe }}
+  </main>
 
+  {% include "components/footer.njk" %}
+  {% include "components/floating-cta.njk" %}
 
-
-    <!-- End Google Tag Manager -->
-  </head>
-
-
-
-  <body class="contain {{ colorHeader }} {% if page.url == '/' %}home{% endif %}">
-
-
-    {% set breadcrumbs = [] %}
-    {% if global.googlemaps_api %}
-      <!-- Google Tag Manager (noscript) -->
-      <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id={{ global.tag_manager }}" height="0" width="0" style="display: none; visibility: hidden"></iframe>
-      </noscript>
-    {% endif %}
-      <!-- End Google Tag Manager (noscript) -->
-
-
-
-    {% include 'components/header.njk' %}
-    <main class=" ">
-      {{ content | safe }}
-    </main>
-    {% include 'templates/7-footer.njk' %}
-
-  
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"></script>
-    <script type="module" src="/assets/js/index.js"></script>
-    <script type="module" src="/assets/js/inview.js"></script>
-    <script>
-        AOS.init();
-      const handleSubmit = (event) => {
-        event.preventDefault();
-        const myForm = event.target;
-        const formData = new FormData(myForm);
-        fetch("/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-          },
-          body: new URLSearchParams(formData).toString()
-        })
-          .then(() => console.log("Form successfully submitted"))
-          .catch((error) => alert(error));
-      };
-    </script>
-    <link async rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" rel="stylesheet" />
-
-  </body>
+  <script src="/assets/js/site.js" defer></script>
+</body>
 </html>

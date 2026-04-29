@@ -1,0 +1,41 @@
+---
+layout: layout/base.njk
+permalink: /preguntas-frecuentes/
+title: "Preguntas Frecuentes · Clínica Estética Sant Boi"
+metaTitle: "Preguntas Frecuentes · Medicina estética y odontología en Sant Boi"
+metaDescription: "Resolvemos las dudas más habituales sobre medicina estética, odontología, precios, financiación, primera visita y seguridad de los tratamientos en Clínica Estética Sant Boi."
+metaKeywords: "FAQ Clínica Sant Boi, preguntas medicina estética, dudas odontología Sant Boi"
+pageType: faq
+---
+
+<section style="padding-top:140px">
+  <div class="wrap">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      <ol><li><a href="/">Inicio</a></li><li aria-current="page">Preguntas frecuentes</li></ol>
+    </nav>
+
+    <div class="section-intro section-intro--center">
+      <div class="section-intro__text">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h1 class="serif">Lo que solemos resolver <em style="font-style:italic;color:var(--c-accent)">antes</em> de la primera visita</h1>
+        <p class="lead mt-4 mx-auto">Respuestas claras a las dudas más habituales sobre nuestros tratamientos, precios, seguridad y financiación.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper">
+  <div class="wrap">
+    <div class="faq">
+      <h2 class="serif" style="margin-bottom:24px">Sobre la clínica</h2>
+      {% for f in site.faq_global %}
+      <details class="faq__item"{% if loop.first %} open{% endif %}>
+        <summary class="faq__q">{{ f.pregunta }}</summary>
+        <div class="faq__a"><p>{{ f.respuesta }}</p></div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% set faqSchema = site.faq_global %}

@@ -1,0 +1,115 @@
+---
+layout: layout/base.njk
+pageType: pillar
+ogType: website
+---
+
+{% set breadcrumbs = [
+  { label: 'Inicio', url: '/' },
+  { label: pillarTitle, url: page.url }
+] %}
+
+<section class="inner-hero">
+  <div class="inner-hero__inner">
+    <div class="inner-hero__copy fade-in">
+      <nav class="breadcrumbs" aria-label="breadcrumb">
+        <ol>
+          <li><a href="/">Inicio</a></li>
+          <li aria-current="page">{{ pillarTitle }}</li>
+        </ol>
+      </nav>
+      <span class="eyebrow">{{ pillarEyebrow }}</span>
+      <h1 class="inner-hero__title">{{ heroTitle | safe }}</h1>
+      <p class="inner-hero__lead lead">{{ heroLead }}</p>
+      <div class="inner-hero__cta">
+        <a href="/contacto/" class="btn btn--primary">Reservar valoración gratuita</a>
+        <a href="https://wa.me/{{ global.whatsapp }}" class="btn btn--ghost">WhatsApp</a>
+      </div>
+    </div>
+    <div class="inner-hero__visual fade-in">
+      <img src="{{ heroImage }}" alt="{{ heroAlt }}" loading="eager" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper">
+  <div class="wrap wrap--prose">
+    <div class="prose">{{ content | safe }}</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">{{ servicesEyebrow }}</span>
+        <h2 class="serif">{{ servicesTitle }}</h2>
+      </div>
+      <div class="section-intro__text"><p>{{ servicesIntro }}</p></div>
+    </div>
+
+    <div class="grid grid-3 mt-12">
+      {% for s in site.servicios_destacados %}
+        {% if s.categoria == servicesCategory %}
+        <article class="card fade-in">
+          <div class="card__media"><img src="{{ s.imagen }}" alt="{{ s.titulo }} en {{ global.ciudad }}" loading="lazy"></div>
+          <div class="card__body">
+            <span class="card__cat">{{ s.categoria }}</span>
+            <h3 class="card__title">{{ s.titulo }}</h3>
+            <p class="card__claim">{{ s.claim }}</p>
+            <p class="card__desc">{{ s.descripcion }}</p>
+            <dl class="card__meta">
+              <div><dt>Duración</dt><dd>{{ s.duracion }}</dd></div>
+              <div><dt>Resultados</dt><dd>{{ s.resultados }}</dd></div>
+            </dl>
+            <a href="{{ s.url }}" class="card__cta">Ver tratamiento</a>
+          </div>
+        </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% if pillarFaq %}
+<section class="bg-bg-alt">
+  <div class="wrap">
+    <div class="section-intro section-intro--center">
+      <div class="section-intro__text">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2 class="serif">{{ faqTitle or 'Resolvemos tus dudas' }}</h2>
+      </div>
+    </div>
+    <div class="faq mt-12">
+      {% for f in pillarFaq %}
+      <details class="faq__item"{% if loop.first %} open{% endif %}>
+        <summary class="faq__q">{{ f.pregunta }}</summary>
+        <div class="faq__a"><p>{{ f.respuesta | safe }}</p></div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% set faqSchema = pillarFaq %}
+{% endif %}
+
+<section class="contact-bar">
+  <div class="wrap">
+    <div class="contact-bar__grid">
+      <div>
+        <span class="eyebrow">Reserva tu primera visita</span>
+        <h2 class="serif">{{ ctaTitle }}</h2>
+        <p class="lead mt-4">{{ ctaText }}</p>
+        <div class="hero__cta">
+          <a href="/contacto/" class="btn btn--gold btn--lg">Reservar primera visita gratuita</a>
+          <a href="tel:{{ global.telefono_link }}" class="btn btn--ghost btn--lg" style="border-color:#F4F1EC;color:#F4F1EC">{{ global.telefono_visible }}</a>
+        </div>
+      </div>
+      <dl>
+        <dt>Dirección</dt><dd>{{ global.direccion }}<br>{{ global.codigopostal }} {{ global.ciudad }}</dd>
+        <dt>Horario</dt><dd>{{ global.horario_visible }}</dd>
+        <dt>Atendemos</dt><dd>Sant Boi, Cornellà, Sant Joan Despí, Viladecans, El Prat y Barcelona ciudad.</dd>
+      </dl>
+    </div>
+  </div>
+</section>

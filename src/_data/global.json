@@ -1,120 +1,126 @@
 {
-  "title": "Clínica Estética Sant Boi",
-  "lang": "es-es",
-  "footer": "",
-  "url": "clinicaesteticasantboi.com",
-  "tag_manager": "GTM-.....R",
-  "home": "Inicio",
-  "about": "Nosotros",
-  "services": "Servicios",
-  "blog": "blog",
-  "contact": "Contacta",
-  "search_console": "JM58eQ0bnbVILctyjF_Aeurn3w_3-sKfNCRcTfR4w5U", 
-  "empresa_legal": "Clínica Estética Sant Boi S.L.",
-  "empresa_corto": "Clínica Estética Sant Boi",
-  "website": "www.clinicaesteticasantboi.com",
-  "telefono": " 695 69 75 04",
-  "empresa_dni": "B.......",
+  "title": "Clínica Estética Sant Boi · Centre Mèdic Basté",
+  "lang": "es-ES",
+  "url": "https://www.clinicaesteticasantboi.com",
+  "domain": "clinicaesteticasantboi.com",
+
+  "empresa": "Centre Mèdic Basté",
+  "empresa_corto": "Centre Mèdic Basté",
+  "empresa_legal": "JM CHAVARRIA SL",
+  "empresa_legal_comercial": "Centre Mèdic i Estètic Basté",
+  "empresa_legal_titular": "JM CHAVARRIA SL — Centre Mèdic i Estètic Basté",
+  "empresa_dni": "B63395933",
+  "empresa_actividad": "Salud / Medicina Estética / Odontología",
+  "empresa_copyright": "© 2026 JM CHAVARRIA SL · Centre Mèdic Basté · Todos los derechos reservados",
+  "fundacion": "2009",
+  "registro_sanitario": "",
+
+  "telefono_visible": "695 69 75 04",
+  "telefono_link": "+34695697504",
+  "telefono_fijo_visible": "93 635 40 25",
+  "telefono_fijo_link": "+34936354025",
+  "whatsapp": "34695697504",
+  "whatsapp_visible": "+34 695 69 75 04",
   "email": "info@centremedicbaste.com",
-  "whatsapp": "+34695697504",
-  "direction": " Dirección Clínica Estética Sant Boi",
-  "empresa_legal_direccion": "Dirección legal Clínica Estética Sant Boi",
-  "direction_link": "link de dirección Clínica Estética Sant Boi",
-  "contacta_map": "https://www.google.com/maps/place/.......",
-  "empresa_copyright": " © 2023 Clínica Estética Sant Boi",
-  "author": "manuel ruiz",
-  "authorweb": "design-systems.es",
-  "authorinstagram": "manuel ruiz",
-  "empresa": "Clínica Estética Sant Boi",
-  "imageDir": "/assets/static/images/",
-  "brands": "1,2,3,4,5,6",
-  "galeria": "1,2,3,4,5,6,7,8",
-  "contact_img": "/assets/static/images/1.jpg",
-  "empresa_legal_titular": "Clínica Estética Sant Boi S.L.",
-  "link": "clinicaesteticasantboi.com",
+  "email_citas": "info@centremedicbaste.com",
+  "email_legal": "centremedicbaste@gmail.com",
+  "dpo_nombre": "Adaptalia Corporación",
+  "dpo_email": "info@adaptaliacorporacion.com",
+  "dpo_telefono": "93 654 90 30",
+
+  "direccion": "Carrer Francesc Macià, 11",
   "codigopostal": "08830",
-  "direccion": " Calle Principal 123",
-  "ciudad": " Sant Boi de Llobregat",
+  "ciudad": "Sant Boi de Llobregat",
   "provincia": "Barcelona",
-  "actividad": " Clínica de estética",
-  "home_image": "",
-  "c_gray": "#727272",
-  "c_primary": "#000000",
-  "c_secondary": "#000000",
-  "c_accent": "#ff0000",
-  "bg_dark": "#1D1E23",
-  "bg_light": "#f3f2f0",
-  "c_bg_light": "#2b2a28",
-  "c_bg_dark": "#f7f6f5",
-  "bg_primary": "linear-gradient(120deg, #E14EF7 0%, #8E44F6 30%, #3D40F5 100%)",
-  "btn_radius": "50px",
-  "padding-global": "16px",
-  "seo_title": "Clínica Estética Sant Boi - Tratamientos de belleza y bienestar",
-  "seo_description": "Descubre los mejores tratamientos estéticos en Clínica Estética Sant Boi. Expertos en belleza y bienestar en Sant Boi de Llobregat.",
-  "googlemaps_api": "",
-  "googlemaps_link": "",
-  "googlemaps_iframe": "",
-  "social_linkedin": " https://www.linkedin.com/company/clinica-estetica-sant-boi",
-  "social_youtube": "https://www.youtube.com/clinicaesteticasantboi",
-  "social_instagram": "https://www.instagram.com/clinicaesteticasantboi",
-  "banner_title": "Contáctanos",
-  "banner_text": "¡Intenta tener tu móvil cerca de ti porque te llamaremos!",
-  "banner_claim": "Garantía de 7 días Con un correo electrónico o solicitud, recibes el 100% de tu inversión de vuelta. ",
-  "banner_button": "enviar",
+  "comunidad": "Cataluña",
+  "pais": "España",
+  "pais_codigo": "ES",
+  "geo_lat": "41.3433",
+  "geo_lng": "2.0339",
+  "area_servicio": ["Sant Boi de Llobregat", "Cornellà de Llobregat", "Sant Joan Despí", "Viladecans", "Sant Vicenç dels Horts", "El Prat de Llobregat", "Esplugues de Llobregat", "Barcelona"],
 
-  "introCta_type": "introCta_type",
-  "introCta_title": "Los mejores **tratamientos estéticos** en **Sant Boi**",
-  "introCta_description": "Descubre nuestra amplia gama de servicios de belleza y bienestar",
-  "introCta_cta": "Reserva tu cita",
-  "introCta_cta_link": "/contacto",
-  "introCta_image": "clinica-estetica-sant-boi.jpg",
-  "introCta_bg_image": "fondo-clinica-estetica.jpg",
-
-  "why_type": "why_type",
-  "why_title": "¿Por qué elegir Clínica Estética Sant Boi?",
-  "why_description": "Ofrecemos tratamientos personalizados con la última tecnología y profesionales altamente cualificados",
-  "why_cta": "Conoce nuestros servicios",
-  "why_cta_link": "/servicios",
-  "why_image": "equipo-clinica-estetica-sant-boi.jpg",
-  "why_bg_image": "interior-clinica-estetica.jpg",
-
-  "benefit_type": "benefit_type",
-  "benefit_title": "Beneficios de nuestros tratamientos",
-  "benefit_description": "En **Clínica Estética Sant Boi** hemos reinventado la experiencia de belleza y bienestar, ofreciendo tratamientos personalizados y resultados visibles desde la primera sesión",
-  "benefit_cta": "Descubre más",
-  "benefit_cta_link": "/beneficios",
-  "benefit_image": "resultados-tratamientos.jpg",
-  "benefit_bg_image": "fondo-beneficios.jpg",
-
-  "benefit": [
-    {
-      "benefit_question": "¿Qué resultados puedo esperar?",
-      "benefit_answer": "Nuestros tratamientos están diseñados para ofrecer resultados visibles y duraderos desde la primera sesión."
-    },
-    {
-      "benefit_question": "¿Son seguros los tratamientos?",
-      "benefit_answer": "Todos nuestros tratamientos son seguros y están avalados por profesionales altamente cualificados."
-    }
+  "horario_visible": "Cita previa · L-V mañana y tarde",
+  "horario_estructurado": [
+    { "dias": ["Mo", "Tu", "We", "Th", "Fr"], "abre": "09:30", "cierra": "20:30" }
   ],
 
-  "contact_type": "contact_type",
-  "contact_title": "Contacta con Clínica Estética Sant Boi",
-  "contact_description": "Estamos aquí para responder a todas tus preguntas y ayudarte a conseguir tus objetivos de belleza y bienestar",
-  "contact_cta": "Enviar mensaje",
-  "contact_cta_link": "/contacto",
-  "contact_image": "recepcion-clinica-estetica-sant-boi.jpg",
-  "contact_bg_image": "fondo-contacto.jpg",
+  "googlemaps_link": "https://www.google.com/maps/search/?api=1&query=Centre+M%C3%A8dic+Bast%C3%A9+Francesc+Maci%C3%A0+11+Sant+Boi+de+Llobregat",
+  "googlemaps_iframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2987.98!2d2.0339!3d41.3433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1",
+  "googlemaps_api": "",
 
-  "faq_title": "Preguntas Frecuentes",
-  "faq_description": "Encuentra las respuestas a las preguntas más comunes sobre nuestros tratamientos y servicios.",
-  "faq": [
-    {
-      "faq_question": "¿Qué tipos de tratamientos ofrecen en Clínica Estética Sant Boi?",
-      "faq_answer": "Ofrecemos una amplia gama de tratamientos estéticos, incluyendo rejuvenecimiento facial, tratamientos corporales, depilación láser y mucho más. Consulta nuestra sección de servicios para más detalles."
-    },
-    {
-      "faq_question": "¿Es necesario concertar una cita previa?",
-      "faq_answer": "Sí, recomendamos concertar una cita previa para garantizar la mejor atención personalizada. Puedes hacerlo a través de nuestro sitio web o llamando a nuestro teléfono de contacto."
-    }
-  ]
+  "social_instagram": "https://www.instagram.com/centremedicbaste",
+  "social_facebook": "https://www.facebook.com/centremedicbaste",
+  "social_linkedin": "",
+  "social_youtube": "",
+  "social_tiktok": "",
+  "social_handle": "@centremedicbaste",
+
+  "tag_manager": "",
+  "search_console": "",
+
+  "logo": "/assets/static/logo.svg",
+  "logo_dark": "/assets/static/logo-dark.svg",
+  "favicon": "/assets/static/favicon.svg",
+  "og_image": "/assets/static/og/clinica-estetica-sant-boi-og.jpg",
+  "imageDir": "/assets/static/images/",
+
+  "claim": "Medicina estética y odontología en Sant Boi de Llobregat",
+  "claim_subtitle": "Tratamientos faciales y dentales con resultados naturales, dirigidos por médicos y odontólogos colegiados.",
+  "tagline_corto": "Resultados naturales. Cuidado real.",
+
+  "design_tokens": {
+    "c_bg": "#EFEBE3",
+    "c_bg_alt": "#F6F2EA",
+    "c_paper": "#FFFFFF",
+    "c_ink": "#222420",
+    "c_ink_soft": "#3A3D37",
+    "c_muted": "#6E6E66",
+    "c_line": "#DFD9CC",
+    "c_accent": "#5C6453",
+    "c_accent_soft": "#7B8472",
+    "c_sage": "#8E9785",
+    "c_sage_dark": "#5C6453",
+    "c_gold": "#B79A6F",
+    "c_warm": "#D9C9B0",
+    "radius_lg": "24px",
+    "radius_md": "16px",
+    "radius_sm": "10px",
+    "btn_radius": "999px",
+    "padding_global": "24px",
+    "max_width": "1440px",
+    "max_text": "68ch",
+    "ease": "cubic-bezier(0.22, 1, 0.36, 1)"
+  },
+
+  "menu_principal": [
+    { "label": "Medicina Estética", "url": "/medicina-estetica/", "submenu": [
+      { "label": "Antiarrugas", "url": "/medicina-estetica/botox-toxina-botulinica/" },
+      { "label": "Ácido Hialurónico", "url": "/medicina-estetica/acido-hialuronico/" },
+      { "label": "Hilos Tensores", "url": "/medicina-estetica/hilos-tensores/" },
+      { "label": "Peelings Químicos", "url": "/medicina-estetica/peelings-quimicos/" },
+      { "label": "Mesoterapia Facial", "url": "/medicina-estetica/mesoterapia-facial/" }
+    ]},
+    { "label": "Odontología", "url": "/odontologia/", "submenu": [
+      { "label": "Implantes Dentales", "url": "/odontologia/implantes-dentales/" },
+      { "label": "Ortodoncia Invisible", "url": "/odontologia/ortodoncia-invisible/" },
+      { "label": "Blanqueamiento Dental", "url": "/odontologia/blanqueamiento-dental/" },
+      { "label": "Carillas Dentales", "url": "/odontologia/carillas-dentales/" }
+    ]},
+    { "label": "Equipo", "url": "/equipo/" },
+    { "label": "Clínica", "url": "/sobre-nosotros/" },
+    { "label": "Blog", "url": "/blog/" },
+    { "label": "Contacto", "url": "/contacto/" }
+  ],
+
+  "menu_legal": [
+    { "label": "Aviso legal", "url": "/aviso-legal/" },
+    { "label": "Política de privacidad", "url": "/politica-privacidad/" },
+    { "label": "Política de cookies", "url": "/politica-cookies/" }
+  ],
+
+  "cta_global": {
+    "primary_label": "Reservar primera visita",
+    "primary_link": "/contacto/",
+    "secondary_label": "Hablar por WhatsApp"
+  }
 }

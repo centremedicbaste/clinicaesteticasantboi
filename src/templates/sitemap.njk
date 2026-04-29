@@ -1,26 +1,16 @@
 ---
 permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
----
-<?xml version="1.0" encoding="utf-8"?>
+---<?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    {# Ordenar las categorías por longitud del slug (jerárquico) #}
-    {% for category in collections.categories | sort(attribute='slug.length', reverse=false) %}
-    <url>
-        <loc>{{ global.url }}/{{ category | slug }}</loc>
-    </url>
-    {% endfor %}
-
-    {# Ordenar las páginas por la longitud de la URL para mostrar de forma jerárquica #}
-    {% for page in collections.all | sort(attribute='url.length', reverse=false) %}
-        {# Excluir páginas con permalink false u otras condiciones #}
-        {% if page.data.permalink != false %}
-        <url>
-            <loc>{{ global.url }}{{ page.url | url }}</loc>
-            <lastmod>{{ page.date.toISOString() }}</lastmod>
-        </url>
-        {% endif %}
-    {% endfor %}
-
+{%- for page in collections.all -%}
+{%- if page.data.permalink != false and page.url and page.url.indexOf('/site') !== 0 and page.url.indexOf('/admin') !== 0 and page.url.indexOf('/templates/') !== 0 %}
+  <url>
+    <loc>{{ global.url }}{{ page.url }}</loc>
+    <lastmod>{{ page.date.toISOString() }}</lastmod>
+    <changefreq>{% if page.url == '/' %}weekly{% else %}monthly{% endif %}</changefreq>
+    <priority>{% if page.url == '/' %}1.0{% elif page.url.split('/').length <= 3 %}0.8{% else %}0.6{% endif %}</priority>
+  </url>
+{%- endif -%}
+{%- endfor %}
 </urlset>
